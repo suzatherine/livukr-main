@@ -1,0 +1,270 @@
+body {
+  text-align: center;
+  padding-top: 4rem;
+}
+
+header {
+  position: initial;
+}
+
+h1.title {
+  font-size: 3rem;
+  margin-block-end: 1rem;
+}
+
+.dropdown-toggle {
+  position: fixed;
+  top: 20px;
+}
+
+section.info > .hero {
+  max-width: 80%;
+}
+
+section.contents {
+  /* display: flex;
+  flex-direction: column; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--padding);
+  max-width: 1080px;
+}
+
+section.contents > * {
+  min-width: 0;
+}
+
+.date {
+  max-width: 70%;
+  width: max-content;
+  margin: auto;
+}
+.date > span {
+  font-size: 2.2rem;
+  display: block;
+  font-family: "Big John";
+}
+
+.contents-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(225, 225, 225, 0.3);
+  border-radius: 10px;
+}
+
+.contents-item:hover {
+  background: var(--accent-color-secondary);
+  border: 1px solid #fff;
+}
+a.contents-item:hover {
+  color: #fff;
+}
+
+.contents-item:active {
+  transform: translateX(2px);
+  box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25);
+  background: var(--accent-color-secondary);
+}
+
+.contents-item > a:active {
+  color: #fff;
+}
+
+.maze {
+  grid-area: a;
+}
+
+/* .hunt > .wrapper  */
+.maze > .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.fair > .wrapper > h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.maze > .wrapper > img,
+.hunt > .wrapper > img {
+  max-width: 50%;
+}
+
+.stpauls {
+  grid-area: b;
+}
+
+.guildhall {
+  grid-area: c;
+}
+
+.londonwall {
+  grid-area: d;
+}
+
+.hunt {
+  grid-area: e;
+}
+
+.practical {
+  grid-area: h;
+}
+
+.after {
+  grid-area: g;
+}
+
+.map {
+  grid-area: f;
+}
+
+.wrapper > h2 {
+  margin-block-end: 0;
+}
+
+/* .hunt > .wrapper > img {
+  display: none;
+} */
+
+/* FOOTER  */
+
+.footer-outer {
+  flex-direction: row;
+  text-align: right;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+img.logo {
+  max-width: 50px;
+  margin-block-start: 1.5rem;
+}
+
+.logo-wrapper.center {
+  display: none;
+}
+
+.logo-wrapper.sidepiece {
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 450px) {
+  body {
+    padding-top: 1rem;
+  }
+  .date {
+    /* max-width: 30%; */
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1.title {
+    width: 100%;
+    font-size: 4rem;
+    margin-block-end: 1.5rem;
+  }
+
+  section > p,
+  p.blurb {
+    max-width: 75%;
+    margin: auto auto 15px auto;
+  }
+  .date {
+    /* max-width: 30%; */
+    margin: auto;
+  }
+
+  section.contents {
+    display: flex;
+    gap: var(--padding);
+  }
+
+  .fair > .wrapper > h2,
+  .wrapper > h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  .maze > .wrapper > img,
+  .hunt > .wrapper > img,
+  .wrapper > img {
+    max-width: 75%;
+  }
+
+  .maze > .wrapper,
+  .hunt > .wrapper {
+    flex-direction: column;
+  }
+
+  .maze {
+    grid-area: a;
+  }
+
+  .stpauls {
+    grid-area: c;
+  }
+
+  .guildhall {
+    grid-area: b;
+  }
+
+  .londonwall {
+    grid-area: d;
+  }
+
+  .hunt {
+    grid-area: e;
+  }
+  .practical {
+    grid-area: g;
+  }
+
+  .map {
+    grid-area: f;
+  }
+
+  .after {
+    grid-area: h;
+  }
+
+  .contents-item > a > img {
+    max-width: 50%;
+  }
+
+  .hunt > .wrapper > img {
+    display: initial;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  img.logo {
+    max-width: 50px;
+    margin-inline-end: 1.5rem;
+    margin-block-start: 0;
+  }
+
+  .logo-wrapper.center {
+    display: initial;
+  }
+
+  .logo-wrapper.sidepiece {
+    display: none;
+  }
+}

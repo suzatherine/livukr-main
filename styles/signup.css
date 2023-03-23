@@ -1,0 +1,80 @@
+body {
+  text-align: center;
+}
+
+header {
+  z-index: 99999;
+}
+header.signup {
+  background: transparent;
+}
+
+.terms > p {
+  font-size: 1.2rem;
+}
+
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  /* font: 14px Helvetica, Arial, sans-serif; */
+  color: #fff;
+  /* color: #000; */
+  border-radius: 5px;
+  padding: 0.5rem;
+  background: transparent;
+  /* background: #fff; */
+  clear: left;
+}
+
+.mclogo {
+  display: none;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+#mc-embedded-subscribe-form input[type="checkbox"] {
+  display: inline;
+  width: auto;
+  margin-right: 10px;
+}
+
+#mergeRow-gdpr {
+  margin-top: 20px;
+}
+
+#mergeRow-gdpr fieldset label {
+  font-weight: normal;
+}
+
+#mc-embedded-subscribe-form .mc_fieldset {
+  border: none;
+  min-height: 0px;
+  padding-bottom: 0px;
+}
+#mc-embedded-subscribe.button {
+  background-color: var(--accent-color-secondary);
+  border: 1px solid #000;
+  color: #000;
+}
+
+#mc_embed_signup .button:hover {
+  background-color: var(--accent-color-secondary);
+}
+
+#mc_embed_signup #mce-success-response {
+  color: #fff;
+  font-size: 2rem;
+}
+
+#mc_embed_signup div#mce-responses {
+  margin: 0;
+}
+
+@media screen and (min-width: 450px) {
+  #mc_embed_signup {
+    width: 600px;
+    margin: auto;
+  }
+}

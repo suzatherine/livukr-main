@@ -1,0 +1,175 @@
+body {
+  text-align: center;
+  font-weight: 600;
+}
+
+a {
+  cursor: pointer;
+}
+p {
+  font-size: 1.8rem;
+}
+
+h1.title,
+h2.title {
+  margin-bottom: 0;
+}
+
+h1.title {
+  font-size: 2.5rem;
+}
+
+h2.title {
+  font-size: 1.8rem;
+}
+
+p.strapline {
+  font-size: 1.8rem;
+}
+p > span {
+  display: block;
+}
+
+.title-wrapper {
+  padding: 1.5rem;
+  width: 90%;
+  text-align: center;
+}
+
+.key-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.keyhole {
+  width: 30%;
+}
+.juggler {
+  max-width: 130px;
+  margin-top: -100px;
+  align-self: flex-start;
+}
+
+.dragon {
+  max-width: 130px;
+  margin-bottom: -100px;
+  align-self: flex-end;
+  z-index: 999;
+}
+
+.hide {
+  display: none;
+}
+
+/* LOGOS  */
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  z-index: -999999;
+}
+
+.logo-wrapper > .logo {
+  max-width: 40px;
+  z-index: -999999;
+  margin-inline-end: 1.5rem;
+}
+img.logo {
+  max-width: 100px;
+}
+
+/* INFO BOX */
+
+.info-wrapper {
+  padding: var(--padding);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.info-wrapper > p {
+  display: flex;
+  flex-direction: column;
+}
+
+.enter {
+  background-color: var(--accent-color-secondary);
+}
+
+.enter > p {
+  margin-block-end: 0;
+}
+
+.enter:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 450px) {
+  main {
+    gap: 0;
+  }
+  .keyhole {
+    width: 40%;
+  }
+  .key-wrapper {
+    width: 60%;
+  }
+
+  .logo-wrapper {
+    justify-content: flex-end;
+  }
+
+  img.logo {
+    max-width: 100px;
+    margin-inline-end: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  main.landing {
+    flex-direction: row;
+  }
+  .keyhole {
+    width: 55%;
+  }
+  .title-wrapper {
+    text-align: left;
+    width: max-content;
+  }
+  .juggler {
+    margin-left: 15%;
+    max-width: 170px;
+  }
+
+  .dragon {
+    margin-right: 15%;
+    max-width: 170px;
+  }
+
+  h1.title {
+    font-size: 3.5rem;
+    margin-block-end: 1rem;
+  }
+
+  h2.title {
+    font-size: 2.5rem;
+    margin-block-end: 1rem;
+  }
+
+  p.strapline {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 850px) and (orientation: portrait) {
+  .keyhole {
+    width: 60%;
+  }
+}
