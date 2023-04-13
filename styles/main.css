@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spinnaker&display=swap");
 
 /* @font-face {
   font-family: "Big John";
@@ -6,19 +9,18 @@
 } */
 
 :root {
-  --main-bg-color: #81184b;
-  --accent-color-primary: #e8d7a4;
+  --main-bg-color: #140246;
+  --accent-color-primary: #fea602;
   --accent-color-secondary: #1fb9aa;
-  --color-red: #bc4121;
-  --color-mint: #94cab7;
-  --color-grey: #7f7f7f;
-  --color-orange: #e86530;
-  --color-purple: #7f6fb0;
-  --color-pink: #cd7362;
-  --font-headings: "Secular One", sans-serif;
-  --font-body: "Open Sans", sans-serif;
-  --font-color: #000;
-  --padding: 1.5rem;
+  --accent-color-shadow: #140246;
+  --color-yellow: #fea602;
+  --color-red: #ff0200;
+  --color-purple: #140246;
+  --color-pink: #ff007c;
+  --color-orange: #f75146;
+  --font-headings: "Shippori Antique B1", sans-serif;
+  --font-body: "Shippori Antique B1", sans-serif;
+  --padding: 2rem;
 }
 
 body {
