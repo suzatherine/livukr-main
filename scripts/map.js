@@ -37,8 +37,8 @@ function initMap() {
   // };
 
   map = new google.maps.Map(document.getElementById("mazeMap"), {
-    center: { lat: 53.40594403187858, lng: -2.9801913905590984 },
-    zoom: 15,
+    center: { lat: 53.40889996737653, lng: -2.981239934137192 },
+    zoom: 17,
     mapId: "116b56ec96574c87",
     // zoomControl: true,
     mapTypeControl: false,
@@ -127,8 +127,8 @@ function initMap() {
         position: new google.maps.LatLng(latitude, longitude),
         // position: new google.maps.LatLng(51.51202, -0.09088),
         type: type,
-        content: `<div id="content" class="infoContent"><h3 class="adventureName">Name</h3>
-        <h4>Time</h4><div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" > Aliquet eget sit amet tellus cras adipiscing enim eu. </p><br/></div></div><div class="contentItem lower"><div class="maptags"><span class="maptag gold">Tag</span> <span class="maptag pink">Tag</span></div><a href="../adventures/${slug}.html"><h3 class="info">More info </h3></a></div></div>`,
+        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3>
+      <div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${description}</p><br/></div></div><div class="contentItem lower"><a href="../locations/${slug}.html"><h3 class="info">I'm here </h3></a></div></div>`,
       };
       locations.push(location);
       // console.log(locations);
@@ -174,58 +174,58 @@ function initMap() {
 
   infoWindow = new google.maps.InfoWindow();
 
-  const locationButton = document.getElementById("locateBtn");
-  locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      // navigator.geolocation.getCurrentPosition(
-      navigator.geolocation.watchPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          const userMarker = new google.maps.Marker({
-            icon: {
-              path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-              fillColor: "#70b000",
-              fillOpacity: 0.9,
-              strokeWeight: 2,
-              strokeColor: "#70b000",
-              rotation: 40,
-              scale: 6,
-            },
-            position: pos,
-            map: map,
-          });
-          userMarker.setPosition(pos);
-          userMarker.addListener("click", () => {
-            placewindow.open({
-              anchor: marker,
-              map,
-              shouldFocus: false,
-            });
-          });
+  // const locationButton = document.getElementById("locateBtn");
+  // locationButton.addEventListener("click", () => {
+  //   // Try HTML5 geolocation.
+  //   if (navigator.geolocation) {
+  //     // navigator.geolocation.getCurrentPosition(
+  //     navigator.geolocation.watchPosition(
+  //       (position) => {
+  //         const pos = {
+  //           lat: position.coords.latitude,
+  //           lng: position.coords.longitude,
+  //         };
+  //         const userMarker = new google.maps.Marker({
+  //           icon: {
+  //             path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+  //             fillColor: "#70b000",
+  //             fillOpacity: 0.9,
+  //             strokeWeight: 2,
+  //             strokeColor: "#70b000",
+  //             rotation: 40,
+  //             scale: 6,
+  //           },
+  //           position: pos,
+  //           map: map,
+  //         });
+  //         userMarker.setPosition(pos);
+  //         userMarker.addListener("click", () => {
+  //           placewindow.open({
+  //             anchor: marker,
+  //             map,
+  //             shouldFocus: false,
+  //           });
+  //         });
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("You are here.");
-          infoWindow.open(map);
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        },
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-  google.maps.event.addListener(map, "click", function () {
-    if (currentInfoWindow != null) {
-      currentInfoWindow.close();
-    }
-  });
+  //         infoWindow.setPosition(pos);
+  //         infoWindow.setContent("You are here.");
+  //         infoWindow.open(map);
+  //         map.setCenter(pos);
+  //       },
+  //       () => {
+  //         handleLocationError(true, infoWindow, map.getCenter());
+  //       },
+  //     );
+  //   } else {
+  //     // Browser doesn't support Geolocation
+  //     handleLocationError(false, infoWindow, map.getCenter());
+  //   }
+  // });
+  // google.maps.event.addListener(map, "click", function () {
+  //   if (currentInfoWindow != null) {
+  //     currentInfoWindow.close();
+  //   }
+  // });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
