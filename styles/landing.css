@@ -36,6 +36,30 @@ p > span {
   text-align: center;
 }
 
+.key-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.keyhole {
+  width: 30%;
+}
+.juggler {
+  max-width: 130px;
+  margin-top: -100px;
+  align-self: flex-start;
+}
+
+.dragon {
+  max-width: 130px;
+  margin-bottom: -100px;
+  align-self: flex-end;
+  z-index: 999;
+}
+
 .hide {
   display: none;
 }
@@ -109,9 +133,6 @@ img.logo {
 }
 
 @media screen and (min-width: 850px) {
-  main.landing {
-    flex-direction: row;
-  }
   .keyhole {
     width: 55%;
   }
