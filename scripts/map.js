@@ -51,9 +51,10 @@ function initMap() {
   let iconBase = "./../assets/img/markers/";
 
   const icons = {
-    kids: {
+    tbc: {
       icon: {
-        url: iconBase + "marker.png",
+        url: iconBase + "black-circle.png",
+
         scaledSize: new google.maps.Size(40, 40),
       },
     },

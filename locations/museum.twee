@@ -1,5 +1,5 @@
 :: StoryTitle
-Investigation Ground
+Investigation Ground Museum
 
 
 :: StoryData
@@ -377,6 +377,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 <<set $showForwards to false>>
 <<set $showBackwards to false>>
 <<set $showCaptionsIcon to false>>
+<<set $currentLocation to "Kharkiv Fine Arts Museum">>
 <main class="landing">
 
 <p>Stand in front of x</p>
@@ -392,8 +393,8 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 :: 360[nobr] {"position":"700,425","size":"100,100"}
 <<set $passage to "360">>
 <main>
-
-<iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/eqwIwcLlYC"></iframe>
+/* Kharkiv Fine Arts Museum */
+<iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/VCNMjeFE5i"></iframe>
 
 <p>Please tap the arrow symbols (in the bottom right corner) to toggle fullscreen mode</p>
 </main>

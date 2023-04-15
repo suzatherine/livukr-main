@@ -1,5 +1,5 @@
 :: StoryTitle
-Investigation Ground
+Investigation Ground Maidan
 
 
 :: StoryData
@@ -355,7 +355,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 <<set $showForwards to false>>
 <<set $showBackwards to false>>
 <<set $showCaptionsIcon to false>>
-<<set $currentLocation to "Liverpool Central">>
+<<set $currentLocation to "The Maidan">>
 <main class="landing">
 
 <p>Stand across the road from the Walker Art Gallery </p>
@@ -372,7 +372,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 
 
 :: AR [nobr]{"position":"450,50","size":"100,100"}
-
+/* Maidan  */
 /* <<include "header">> */
 <main class="ar">
 

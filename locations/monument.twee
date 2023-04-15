@@ -1,5 +1,5 @@
 :: StoryTitle
-Investigation Ground
+Investigation Ground Monument
 
 
 :: StoryData
@@ -377,7 +377,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 <<set $showForwards to false>>
 <<set $showBackwards to false>>
 <<set $showCaptionsIcon to false>>
-<<set $currentLocation to "Liverpool Central">>
+<<set $currentLocation to " Taras Shevchenko Monument">>
 <main class="landing">
 
 <p>Stand in front of x</p>
@@ -392,10 +392,11 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 
 :: 360[nobr] {"position":"700,425","size":"100,100"}
 <<set $passage to "360">>
-<<set $currentLocation to "St George's Hall">>
+<<set $currentLocation to " Taras Shevchenko Monument">>
+/* Taras Shevchenko Monument */
 <main>
 
-<iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/4xursceJIj"></iframe>
+<iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/adUF1gbwpn"></iframe>
 
 <p>Please tap the arrow symbols (in the bottom right corner) to toggle fullscreen mode</p>
 </main>

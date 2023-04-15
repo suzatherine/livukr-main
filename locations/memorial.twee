@@ -1,10 +1,10 @@
 :: StoryTitle
-Investigation Ground
+Investigation Ground Memorial
 
 
 :: StoryData
 {
-	"ifid": "C3A16691-C05E-47CA-B8E6-A1CC8340BED9",
+	"ifid": "C3A16691-C05E-47CA-B8E6-A1CC8341BED9",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
 	"start": "landing",
@@ -355,7 +355,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 <<set $showForwards to false>>
 <<set $showBackwards to false>>
 <<set $showCaptionsIcon to false>>
-<<set $currentLocation to "Liverpool Central">>
+<<set $currentLocation to "Drobitsky Yar Holocaust Memorial">>
 <main class="landing">
 
 <p> Stand a few meters back from the statue</p>
@@ -370,7 +370,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 
 
 :: AR [nobr]{"position":"450,50","size":"100,100"}
-
+/* Drobitsky Yar Holocaust Memorial */
 /* <<include "header">> */
 <main class="ar">
 

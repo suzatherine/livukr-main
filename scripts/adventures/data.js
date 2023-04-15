@@ -4,7 +4,7 @@ const adventures = [
     attributes: {
       name: "Maidan",
       location: null,
-      description: "Point 1 (LofiAR example)",
+      description: "Point 1",
       createdAt: "",
       updatedAt: "",
       publishedAt: "",
@@ -69,13 +69,13 @@ const adventures = [
   {
     id: 2,
     attributes: {
-      name: "Point 2",
+      name: "Karazin National University - Outside",
       location: null,
-      description: "Soviet Statues",
+      description: "Point 2",
       createdAt: "",
       updatedAt: "",
       publishedAt: "",
-      slug: "360",
+      slug: "university-outside",
       keyinfo: "",
 
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
@@ -138,7 +138,7 @@ const adventures = [
     attributes: {
       name: "Soviet Statues",
       location: null,
-      description: "Point 3",
+      description: "Point 3 - Need images",
       createdAt: "",
       updatedAt: "",
       publishedAt: "",
@@ -148,7 +148,7 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40922,
       longitude: -2.98086,
-      type: "families",
+      type: "tbc",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
@@ -209,7 +209,7 @@ const adventures = [
       createdAt: "",
       updatedAt: "",
       publishedAt: "",
-      slug: "loc-1",
+      slug: "memorial",
       keyinfo: "",
 
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
@@ -339,7 +339,7 @@ const adventures = [
     attributes: {
       name: "Polovtsian Stone Statues",
       location: null,
-      description: "Point 6",
+      description: "Point 6 - Need images",
       createdAt: "",
       updatedAt: "",
       publishedAt: "",
@@ -349,7 +349,7 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40919,
       longitude: -2.98186,
-      type: "families",
+      type: "tbc",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
@@ -410,7 +410,7 @@ const adventures = [
       createdAt: "",
       updatedAt: "",
       publishedAt: "",
-      slug: "loc-1",
+      slug: "serhiy",
       keyinfo: "",
 
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
@@ -471,13 +471,13 @@ const adventures = [
   {
     id: 8,
     attributes: {
-      name: "Point 8",
+      name: "Karazin National University - Inside",
       location: null,
       description: "Point 8",
       createdAt: "",
       updatedAt: "",
       publishedAt: "",
-      slug: "loc-1",
+      slug: "university-inside",
       keyinfo: "",
 
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
@@ -544,7 +544,7 @@ const adventures = [
       createdAt: "",
       updatedAt: "",
       publishedAt: "",
-      slug: "",
+      slug: "govbuilding",
       keyinfo: "",
 
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
