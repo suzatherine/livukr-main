@@ -4,7 +4,7 @@ Investigation Ground
 
 :: StoryData
 {
-	"ifid": "C3A16691-C05E-47CA-B8E6-A1CC8300BED9",
+	"ifid": "C3A16691-C05E-47CA-B8E6-A1CC8340BED9",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
 	"start": "landing",
@@ -358,10 +358,8 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 <<set $currentLocation to "Liverpool Central">>
 <main class="landing">
 
-<p>Stand across the road from the Walker Art Gallery </p>
-<p>Face towards the large column</p>
-<p>Hold up your phone </p>
-
+<p> Stand a few meters back from the statue</p>
+<p> Hold up your phone </p>
 
 <div class="nav-wrapper">
 <<button "Show Me">><<goto "AR">><</button>>
@@ -378,7 +376,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 
   <div class="ar-imgs-container one" id="ARContainer">
     <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/lofiar/Maidan1504.gif" class="">
+        <img src="./assets/img/lofiar/GifDrobitskyMemorial-Point4.gif" class="">
       </div>
     <div class="ar-img-wrapper touch bottom" id="initial" >
       <img src="./assets/img/everyman-inside.jpeg" class="">
@@ -394,7 +392,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 <footer class="ar">
   <div class="nav-wrapper">
     <div class="nav-item">
-    <div id="mount"> <span>Press the image</span> <span>to see it transform</span></div>
+    <div id="mount"> <span>Press the photo</span> <span>to see it transform</span></div>
     <<silently>>
 	<<repeat 10s>>
     <<timed 0.1s>>
@@ -404,7 +402,7 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
      <</timed>>
      <<timed 6s>>
       <<replace "#mount">>
-       <span>Press the image</span> <span>to see it transform</span>
+       <span>Press the photo</span> <span>to see it transform</span>
       <</replace>>
      <</timed>>
     <</repeat>>

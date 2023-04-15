@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://C3A16691-C05E-47CA-B8E6-A1CC8300BED9// --><tw-storydata name="Investigation Ground" startnode="7" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C3A16691-C05E-47CA-B8E6-A1CC8300BED9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<!-- UUID://C3A16691-C05E-47CA-B8E6-A1CC8340BED9// --><tw-storydata name="Investigation Ground" startnode="7" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C3A16691-C05E-47CA-B8E6-A1CC8340BED9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
 @import url("./styles/generics.css");
 @import url("./styles/styles.css");</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
@@ -406,10 +406,8 @@ setup.backThirty = () => {
 &lt;&lt;set $currentLocation to &quot;Liverpool Central&quot;&gt;&gt;
 &lt;main class=&quot;landing&quot;&gt;
 
-&lt;p&gt;Stand across the road from the Walker Art Gallery &lt;/p&gt;
-&lt;p&gt;Face towards the large column&lt;/p&gt;
-&lt;p&gt;Hold up your phone &lt;/p&gt;
-
+&lt;p&gt; Stand a few meters back from the statue&lt;/p&gt;
+&lt;p&gt; Hold up your phone &lt;/p&gt;
 
 &lt;div class=&quot;nav-wrapper&quot;&gt;
 &lt;&lt;button &quot;Show Me&quot;&gt;&gt;&lt;&lt;goto &quot;AR&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -420,7 +418,7 @@ setup.backThirty = () => {
 
   &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
     &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
-        &lt;img src=&quot;./assets/img/lofiar/Maidan1504.gif&quot; class=&quot;&quot;&gt;
+        &lt;img src=&quot;./assets/img/lofiar/GifDrobitskyMemorial-Point4.gif&quot; class=&quot;&quot;&gt;
       &lt;/div&gt;
     &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
       &lt;img src=&quot;./assets/img/everyman-inside.jpeg&quot; class=&quot;&quot;&gt;
@@ -433,7 +431,7 @@ setup.backThirty = () => {
 &lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;div id=&quot;mount&quot;&gt; &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;&lt;/div&gt;
+    &lt;div id=&quot;mount&quot;&gt; &lt;span&gt;Press the photo&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;&lt;/div&gt;
     &lt;&lt;silently&gt;&gt;
 	&lt;&lt;repeat 10s&gt;&gt;
     &lt;&lt;timed 0.1s&gt;&gt;
@@ -443,7 +441,7 @@ setup.backThirty = () => {
      &lt;&lt;/timed&gt;&gt;
      &lt;&lt;timed 6s&gt;&gt;
       &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-       &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;
+       &lt;span&gt;Press the photo&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;
       &lt;&lt;/replace&gt;&gt;
      &lt;&lt;/timed&gt;&gt;
     &lt;&lt;/repeat&gt;&gt;
