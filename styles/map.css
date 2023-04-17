@@ -112,7 +112,7 @@ p.broadcast {
   /* background-color: var(--color-mint); */
   width: fit-content;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
   flex-direction: column;
@@ -151,6 +151,14 @@ h3.adventureName,
 .infoContent > h4,
 .contentItem > a > h3 {
   color: var(--color-purple);
+}
+
+.gm-style .gm-style-iw-c {
+  max-width: 200px;
+}
+
+.gm-style .gm-style-iw-c > button {
+  box-shadow: none;
 }
 
 p.adventureInfo {

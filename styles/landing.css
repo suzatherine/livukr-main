@@ -37,30 +37,6 @@ p > span {
   text-align: center;
 }
 
-.key-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-.keyhole {
-  width: 30%;
-}
-.juggler {
-  max-width: 130px;
-  margin-top: -100px;
-  align-self: flex-start;
-}
-
-.dragon {
-  max-width: 130px;
-  margin-bottom: -100px;
-  align-self: flex-end;
-  z-index: 999;
-}
-
 .hide {
   display: none;
 }
@@ -85,6 +61,18 @@ p > span {
 }
 img.logo {
   max-width: 100px;
+}
+
+.icon {
+  max-height: 4.5vh;
+}
+
+.control-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
 }
 
 /* INFO BOX */
