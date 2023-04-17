@@ -376,10 +376,10 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 
   <div class="ar-imgs-container one" id="ARContainer">
     <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/lofiar/Serhiy1504.gif" class="">
+        <img src="./assets/img/lofiar/serhiy.gif" class="">
       </div>
     <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/everyman-inside.jpeg" class="">
+      <img src="./assets/img/serhiy.jpeg" class="">
       </div>
   </div>
 

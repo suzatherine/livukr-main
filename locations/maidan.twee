@@ -348,7 +348,9 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 
 
 :: landing [nobr] {"position":"700,175","size":"100,100"}
+<<set $prevpass to "landing">>
 <<set $passage to "landing">>
+<<set $nextpass to "AR1">>
 <<set $showMap to false>>
 <<set $showAudio to false>>
 <<set $showReplay to false>>
@@ -358,30 +360,125 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 <<set $currentLocation to "The Maidan">>
 <main class="landing">
 
-<p>Stand across the road from the Walker Art Gallery </p>
-<p>Face towards the large column</p>
-<p>Hold up your phone </p>
+<p class="comment">Stand across the road from the Walker Art Gallery </p>
+<p class="comment">Face towards the large column</p>
+<p class="comment">Hold up your phone </p>
 
 
 <div class="nav-wrapper">
-<<button "Show Me">><<goto "AR">><</button>>
+<<button "Show Me">><<goto "AR1">><</button>>
 </div>
 
 </main>
 
 
 
-:: AR [nobr]{"position":"450,50","size":"100,100"}
+:: AR1 [nobr]{"position":"450,50","size":"100,100"}
 /* Maidan  */
+<<set $prevpass to "landing">>
+<<set $passage to "AR1">>
+<<set $nextpass to "AR2">>
+/* <<include "header">> */
+<main class="ar multiple">
+ <div class="ar-wrapper">
+    <div class="ar-imgs-container one" id="ARContainer">
+      <div class="hidden-img-wrapper touch transparent" id="reveal" >
+          <img src="./assets/img/maidan2a.jpeg" class="">
+        </div>
+      <div class="ar-img-wrapper touch bottom" id="initial" >
+        <img src="./assets/img/maidan1a.jpeg" class="">
+        </div>
+    </div>
+ </div>
+
+
+
+</main>
+
+<<include "footerMaidan">>
+<<done>><<set $s to setup.startup()>><</done>>
+
+
+:: AR2 [nobr]{"position":"450,50","size":"100,100"}
+/* Maidan  */
+<<set $prevpass to "AR1">>
+<<set $passage to "AR2">>
+<<set $nextpass to "AR3">>
 /* <<include "header">> */
 <main class="ar">
 
   <div class="ar-imgs-container one" id="ARContainer">
     <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/lofiar/Maidan1504.gif" class="">
+        <img src="./assets/img/maidan2b.jpeg" class="">
       </div>
     <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/everyman-inside.jpeg" class="">
+      <img src="./assets/img/maidan1b.jpeg" class="">
+      </div>
+  </div>
+
+
+</main>
+<<include "footerMaidan">>
+<<done>><<set $s to setup.startup()>><</done>>
+
+:: AR3 [nobr]{"position":"450,50","size":"100,100"}
+/* Maidan  */
+<<set $prevpass to "AR2">>
+<<set $passage to "AR3">>
+<<set $nextpass to "AR4">>
+/* <<include "header">> */
+<main class="ar">
+
+  <div class="ar-imgs-container one" id="ARContainer">
+    <div class="hidden-img-wrapper touch transparent" id="reveal" >
+        <img src="./assets/img/maidan2c.jpeg" class="">
+      </div>
+    <div class="ar-img-wrapper touch bottom" id="initial" >
+      <img src="./assets/img/maidan1c.jpeg" class="">
+      </div>
+  </div>
+
+
+</main>
+<<include "footerMaidan">>
+<<done>><<set $s to setup.startup()>><</done>>
+
+
+:: AR4 [nobr]{"position":"450,50","size":"100,100"}
+/* Maidan  */
+<<set $prevpass to "AR3">>
+<<set $passage to "AR4">>
+<<set $nextpass to "AR5">>
+/* <<include "header">> */
+<main class="ar">
+
+  <div class="ar-imgs-container one" id="ARContainer">
+    <div class="hidden-img-wrapper touch transparent" id="reveal" >
+        <img src="./assets/img/maidan2d.jpeg" class="">
+      </div>
+    <div class="ar-img-wrapper touch bottom" id="initial" >
+      <img src="./assets/img/maidan1d.jpeg" class="">
+      </div>
+  </div>
+</main>
+<<include "footerMaidan">>
+<<done>><<set $s to setup.startup()>><</done>>
+
+
+:: AR5 [nobr]{"position":"450,50","size":"100,100"}
+/* Maidan  */
+<<set $prevpass to "AR4">>
+<<set $passage to "AR5">>
+<<set $nextpass to "AR5">>
+/* <<include "header">> */
+<main class="ar">
+
+  <div class="ar-imgs-container one" id="ARContainer">
+    <div class="hidden-img-wrapper touch transparent" id="reveal" >
+        <img src="./assets/img/maidan2e.jpeg" class="">
+      </div>
+    <div class="ar-img-wrapper touch bottom" id="initial" >
+      <img src="./assets/img/maidan1e.jpeg" class="">
       </div>
   </div>
 
@@ -389,6 +486,10 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 </main>
 <<include "footerAR">>
 <<done>><<set $s to setup.startup()>><</done>>
+
+
+
+
 
 :: footerAR [nobr]{"position":"100,375","size":"100,100"}
 <footer class="ar">
@@ -413,6 +514,42 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
     <div class="nav-wrapper">
     <div class="nav-item">
        <a href="./../map.html"><button>Back to Map</button></a>
+    </div>
+  </div>
+</footer>
+
+
+:: footerMaidan [nobr]{"position":"100,375","size":"100,100"}
+<footer class="ar">
+
+  <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|./assets/img/back.png][$prevpass]]
+    </div>
+  </div>
+
+<div class="nav-wrapper">
+    <div class="nav-item">
+    <div id="mount"> <span>Press the image</span> <span>to see it transform</span></div>
+    <<silently>>
+	<<repeat 10s>>
+    <<timed 0.1s>>
+      <<replace "#mount">>
+         <span>Move clockwise and click </span> <span> to see the next image</span>
+      <</replace>>
+     <</timed>>
+     <<timed 6s>>
+      <<replace "#mount">>
+       <span>Press the image</span> <span>to see it transform</span>
+      <</replace>>
+     <</timed>>
+    <</repeat>>
+<</silently>>
+ </div>
+  </div>
+    <div class="nav-wrapper">
+    <div class="nav-item">
+       <<button "Next">><<goto $nextpass>><</button>>
     </div>
   </div>
 </footer>

@@ -396,7 +396,9 @@ setup.backThirty = () => {
  
   &lt;/div&gt;
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="landing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="landing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
 &lt;&lt;set $showReplay to false&gt;&gt;
@@ -406,32 +408,112 @@ setup.backThirty = () => {
 &lt;&lt;set $currentLocation to &quot;The Maidan&quot;&gt;&gt;
 &lt;main class=&quot;landing&quot;&gt;
 
-&lt;p&gt;Stand across the road from the Walker Art Gallery &lt;/p&gt;
-&lt;p&gt;Face towards the large column&lt;/p&gt;
-&lt;p&gt;Hold up your phone &lt;/p&gt;
+&lt;p class=&quot;comment&quot;&gt;Stand across the road from the Walker Art Gallery &lt;/p&gt;
+&lt;p class=&quot;comment&quot;&gt;Face towards the large column&lt;/p&gt;
+&lt;p class=&quot;comment&quot;&gt;Hold up your phone &lt;/p&gt;
 
 
 &lt;div class=&quot;nav-wrapper&quot;&gt;
-&lt;&lt;button &quot;Show Me&quot;&gt;&gt;&lt;&lt;goto &quot;AR&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Show Me&quot;&gt;&gt;&lt;&lt;goto &quot;AR1&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="8" name="AR" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="8" name="AR1" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;AR1&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;AR2&quot;&gt;&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;ar multiple&quot;&gt;
+ &lt;div class=&quot;ar-wrapper&quot;&gt;
+    &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+      &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
+          &lt;img src=&quot;./assets/img/maidan2a.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+      &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
+        &lt;img src=&quot;./assets/img/maidan1a.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+ &lt;/div&gt;
+
+
+
+&lt;/main&gt;
+
+&lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AR2" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;AR1&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;AR2&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;AR3&quot;&gt;&gt;
 /* &lt;&lt;include &quot;header&quot;&gt;&gt; */
 &lt;main class=&quot;ar&quot;&gt;
 
   &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
     &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
-        &lt;img src=&quot;./assets/img/lofiar/Maidan1504.gif&quot; class=&quot;&quot;&gt;
+        &lt;img src=&quot;./assets/img/maidan2b.jpeg&quot; class=&quot;&quot;&gt;
       &lt;/div&gt;
     &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
-      &lt;img src=&quot;./assets/img/everyman-inside.jpeg&quot; class=&quot;&quot;&gt;
+      &lt;img src=&quot;./assets/img/maidan1b.jpeg&quot; class=&quot;&quot;&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+
+&lt;/main&gt;
+&lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="AR3" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;AR2&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;AR3&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;AR4&quot;&gt;&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;ar&quot;&gt;
+
+  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+    &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
+        &lt;img src=&quot;./assets/img/maidan2c.jpeg&quot; class=&quot;&quot;&gt;
+      &lt;/div&gt;
+    &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
+      &lt;img src=&quot;./assets/img/maidan1c.jpeg&quot; class=&quot;&quot;&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+
+&lt;/main&gt;
+&lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="AR4" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;AR3&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;AR4&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;AR5&quot;&gt;&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;ar&quot;&gt;
+
+  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+    &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
+        &lt;img src=&quot;./assets/img/maidan2d.jpeg&quot; class=&quot;&quot;&gt;
+      &lt;/div&gt;
+    &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
+      &lt;img src=&quot;./assets/img/maidan1d.jpeg&quot; class=&quot;&quot;&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/main&gt;
+&lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="AR5" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;AR4&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;AR5&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;AR5&quot;&gt;&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;ar&quot;&gt;
+
+  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+    &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
+        &lt;img src=&quot;./assets/img/maidan2e.jpeg&quot; class=&quot;&quot;&gt;
+      &lt;/div&gt;
+    &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
+      &lt;img src=&quot;./assets/img/maidan1e.jpeg&quot; class=&quot;&quot;&gt;
       &lt;/div&gt;
   &lt;/div&gt;
 
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footerAR&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
     &lt;div id=&quot;mount&quot;&gt; &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;&lt;/div&gt;
@@ -453,6 +535,38 @@ setup.backThirty = () => {
     &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
        &lt;a href=&quot;./../map.html&quot;&gt;&lt;button&gt;Back to Map&lt;/button&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="14" name="footerMaidan" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+
+  &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+        [img[Back|./assets/img/back.png][$prevpass]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+    &lt;div id=&quot;mount&quot;&gt; &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;&lt;/div&gt;
+    &lt;&lt;silently&gt;&gt;
+	&lt;&lt;repeat 10s&gt;&gt;
+    &lt;&lt;timed 0.1s&gt;&gt;
+      &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+         &lt;span&gt;Move clockwise and click &lt;/span&gt; &lt;span&gt; to see the next image&lt;/span&gt;
+      &lt;&lt;/replace&gt;&gt;
+     &lt;&lt;/timed&gt;&gt;
+     &lt;&lt;timed 6s&gt;&gt;
+      &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+       &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;
+      &lt;&lt;/replace&gt;&gt;
+     &lt;&lt;/timed&gt;&gt;
+    &lt;&lt;/repeat&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+ &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+       &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/footer&gt;</tw-passagedata></tw-storydata>
