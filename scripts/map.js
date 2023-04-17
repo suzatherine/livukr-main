@@ -175,58 +175,58 @@ function initMap() {
 
   infoWindow = new google.maps.InfoWindow();
 
-  const locationButton = document.getElementById("locateBtn");
-  locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      // navigator.geolocation.getCurrentPosition(
-      navigator.geolocation.watchPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          const userMarker = new google.maps.Marker({
-            icon: {
-              path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-              fillColor: "#1fb9aa",
-              fillOpacity: 0.9,
-              strokeWeight: 2,
-              strokeColor: "#1fb9aa",
-              rotation: 40,
-              scale: 6,
-            },
-            position: pos,
-            map: map,
-          });
-          userMarker.setPosition(pos);
-          userMarker.addListener("click", () => {
-            placewindow.open({
-              anchor: marker,
-              map,
-              shouldFocus: false,
-            });
-          });
+  // const locationButton = document.getElementById("locateBtn");
+  // locationButton.addEventListener("click", () => {
+  //   // Try HTML5 geolocation.
+  //   if (navigator.geolocation) {
+  //     // navigator.geolocation.getCurrentPosition(
+  //     navigator.geolocation.watchPosition(
+  //       (position) => {
+  //         const pos = {
+  //           lat: position.coords.latitude,
+  //           lng: position.coords.longitude,
+  //         };
+  //         const userMarker = new google.maps.Marker({
+  //           icon: {
+  //             path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+  //             fillColor: "#1fb9aa",
+  //             fillOpacity: 0.9,
+  //             strokeWeight: 2,
+  //             strokeColor: "#1fb9aa",
+  //             rotation: 40,
+  //             scale: 6,
+  //           },
+  //           position: pos,
+  //           map: map,
+  //         });
+  //         userMarker.setPosition(pos);
+  //         userMarker.addListener("click", () => {
+  //           placewindow.open({
+  //             anchor: marker,
+  //             map,
+  //             shouldFocus: false,
+  //           });
+  //         });
 
-          infoWindow.setPosition(pos);
-          // infoWindow.setContent("You are here.");
-          // infoWindow.open(map);
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        },
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-  google.maps.event.addListener(map, "click", function () {
-    if (currentInfoWindow != null) {
-      currentInfoWindow.close();
-    }
-  });
+  //         infoWindow.setPosition(pos);
+  //         // infoWindow.setContent("You are here.");
+  //         // infoWindow.open(map);
+  //         map.setCenter(pos);
+  //       },
+  //       () => {
+  //         handleLocationError(true, infoWindow, map.getCenter());
+  //       },
+  //     );
+  //   } else {
+  //     // Browser doesn't support Geolocation
+  //     handleLocationError(false, infoWindow, map.getCenter());
+  //   }
+  // });
+  // google.maps.event.addListener(map, "click", function () {
+  //   if (currentInfoWindow != null) {
+  //     currentInfoWindow.close();
+  //   }
+  // });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
