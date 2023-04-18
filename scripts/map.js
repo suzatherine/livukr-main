@@ -51,23 +51,23 @@ function initMap() {
   let iconBase = "./../assets/img/markers/";
 
   const icons = {
-    tbc: {
+    lofi: {
       icon: {
-        url: iconBase + "black-circle.png",
+        url: iconBase + "marker-purblue.png",
 
-        scaledSize: new google.maps.Size(40, 40),
-      },
-    },
-    markers: {
-      icon: {
-        url: iconBase + "marker-gra.png",
         scaledSize: new google.maps.Size(30, 42),
       },
     },
-    adults: {
+    // pano: {
+    //   icon: {
+    //     url: iconBase + "marker-gra.png",
+    //     scaledSize: new google.maps.Size(30, 42),
+    //   },
+    // },
+    pano: {
       icon: {
-        url: iconBase + "marker.png",
-        scaledSize: new google.maps.Size(40, 40),
+        url: iconBase + "marker-gra.png",
+        scaledSize: new google.maps.Size(30, 42),
       },
     },
     adventure: {
@@ -128,8 +128,8 @@ function initMap() {
         position: new google.maps.LatLng(latitude, longitude),
         // position: new google.maps.LatLng(51.51202, -0.09088),
         type: type,
-        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3>
-      <a href="../locations/${slug}.html"><h3 class="info">Show Me</h3></a></div>`,
+        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3><p>${logistics}</p>
+      <a href="../locations/${slug}.html"><h3 class="info">I'm here</h3></a></div>`,
       };
       locations.push(location);
       // console.log(locations);

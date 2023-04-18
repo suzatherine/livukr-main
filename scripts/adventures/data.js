@@ -14,12 +14,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40975,
       longitude: -2.97942,
-      type: "markers",
+      type: "lofi",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -81,12 +80,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40964,
       longitude: -2.98065,
-      type: "markers",
+      type: "pano",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -148,12 +146,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40922,
       longitude: -2.98086,
-      type: "markers",
+      type: "lofi",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -215,12 +212,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40884,
       longitude: -2.98136,
-      type: "markers",
+      type: "lofi",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -282,12 +278,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.4089,
       longitude: -2.98177,
-      type: "markers",
+      type: "pano",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -349,12 +344,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40919,
       longitude: -2.98186,
-      type: "markers",
+      type: "lofi",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -416,12 +410,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40836,
       longitude: -2.98147,
-      type: "markers",
+      type: "lofi",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -483,12 +476,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40977,
       longitude: -2.981,
-      type: "markers",
+      type: "pano",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -550,12 +542,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.4095,
       longitude: -2.98146,
-      type: "markers",
+      type: "pano",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
@@ -617,12 +608,11 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40872,
       longitude: -2.98065,
-      type: "markers",
+      type: "pano",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",
-      logistics:
-        "Don't forget your smartphone. This route includes audio content and is better enjoyed with headphones, but captions will also be available.",
+      logistics: "One line about where to stand",
       tags: {
         data: [
           {
