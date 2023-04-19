@@ -70,10 +70,10 @@ function initMap() {
         scaledSize: new google.maps.Size(30, 42),
       },
     },
-    adventure: {
+    end: {
       icon: {
-        url: iconBase + "marker.png",
-        scaledSize: new google.maps.Size(40, 40),
+        url: iconBase + "marker-greblue.png",
+        scaledSize: new google.maps.Size(30, 42),
       },
     },
   };
@@ -111,27 +111,29 @@ function initMap() {
   const createAdventures = async (adventures) => {
     // const adventures = await fetchAdventures();
     adventures.map((adventure) => {
-      const {
-        name,
-        lastEntry,
-        description,
-        after,
-        logistics,
-        tags,
-        latitude,
-        longitude,
-        slug,
-        type,
-      } = adventure.attributes;
-      // console.log(type);
-      const location = {
-        position: new google.maps.LatLng(latitude, longitude),
-        // position: new google.maps.LatLng(51.51202, -0.09088),
-        type: type,
-        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3><p>${logistics}</p>
-      <a href="../locations/${slug}.html"><h3 class="info">I'm here</h3></a></div>`,
-      };
-      locations.push(location);
+      const { name, latitude, longitude, slug, type, logistics } =
+        adventure.attributes;
+
+      if (type === "end") {
+        const location = {
+          position: new google.maps.LatLng(latitude, longitude),
+          // position: new google.maps.LatLng(51.51202, -0.09088),
+          type: type,
+          content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3><p>${logistics}</p>
+      <a href="https://fr-war-of-words.netlify.app/"><button><h3 class="info">I'm here</h3></button></a></div>`,
+        };
+        locations.push(location);
+      } else {
+        const location = {
+          position: new google.maps.LatLng(latitude, longitude),
+          // position: new google.maps.LatLng(51.51202, -0.09088),
+          type: type,
+          content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3><p>${logistics}</p>
+      <a href="../locations/${slug}.html"><button><h3 class="info">I'm here</h3></button></a></div>`,
+        };
+        locations.push(location);
+      }
+
       // console.log(locations);
     });
     showAllMarkers();

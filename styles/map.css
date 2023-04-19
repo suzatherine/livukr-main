@@ -118,6 +118,10 @@ p.broadcast {
   flex-direction: column;
 }
 
+.infoContent > p {
+  color: #177b72;
+  font-weight: 600;
+}
 .contentItem {
   text-align: left;
   display: flex;
