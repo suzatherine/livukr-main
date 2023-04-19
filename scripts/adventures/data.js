@@ -676,7 +676,7 @@ const adventures = [
       gm: "https://goo.gl/maps/J4DgjiuDvpmKNsU57",
       latitude: 53.40961,
       longitude: -2.98182,
-      type: "pano",
+      type: "lofi",
       openingTime: "Time",
       lastEntry: "Time",
       startingInstruction: " ",

@@ -204,7 +204,6 @@ setup.backThirty = () => {
 <<include "headerpano">>
 <audio id="audio" autoplay>
   <source src="https://withfireandrageliverpool.com/audio/IG/IG10-V1.mp3">
-
 </audio>
 <main class="pano">
 /* Kharkiv Government Building */

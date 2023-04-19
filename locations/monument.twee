@@ -54,23 +54,6 @@ const handleStart = (evt) =>{
     //  reveal.classList.add("transparent");  
      initial.classList.add("transparent");  
      console.log(reveal)
-//       setTimeout(() => {
-//     initial.classList.add("hide"); 
-// }, "1000");
-   
-//   initial.classList.add("dissolve");  
-//    stat.classList.add("appear"); 
-//   setTimeout(() => {
-//     initial.classList.add("hide"); 
-//   // stat.classList.add("dissolve"); 
-//   // reveal.classList.add("dissolve"); 
-// }, "5000");
-//  setTimeout(() => {
-//     // initial.classList.add("hide"); 
-//   stat.classList.add("hide"); 
-//   // reveal.classList.add("dissolve"); 
-// }, "6000");
-  // el.classList.remove("hide"); 
   
 }
 
@@ -84,11 +67,7 @@ const handleEnd = (evt) => {
   // log("touchend");
    const initial = document.getElementById("initial");
     const reveal = document.getElementById("reveal");
-    //  initial.classList.remove("hide"); 
      initial.classList.remove("transparent");  
-  // initial.classList.remove("hide")  
-  //   reveal.classList.add("hide");  
-  
 }
 
 const handleCancel = (evt) => {
@@ -103,13 +82,7 @@ const handleCancel = (evt) => {
 }
 
 function colorForTouch(touch) {
-  // let r = touch.identifier % 16;
-  // let g = Math.floor(touch.identifier / 3) % 16;
-  // let b = Math.floor(touch.identifier / 7) % 16;
-  // r = r.toString(16); // make it a hex digit
-  // g = g.toString(16); // make it a hex digit
-  // b = b.toString(16); // make it a hex digit
-  // const color = `#${r}${g}${b}`;
+
     const color = `#666`;
   return color;
 }
@@ -214,21 +187,20 @@ setup.backThirty = () => {
 
 :: 360[nobr] {"position":"700,425","size":"100,100"}
 <<set $passage to "360">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to false>>
-<<set $showForwards to false>>
-<<set $showBackwards to false>>
 <<set $currentLocation to " Taras Shevchenko Monument">>
 <<set $transcript to false>>
 <<set $Panotitle to "Taras Shevchenko Monument">>
 <<set $transcriptname to  "360transcript">>
 <<include "headerpano">>
+<audio id="audio" autoplay>
+  <source src="https://withfireandrageliverpool.com/audio/IG/IG4-V1.mp3">
+</audio>
 /* Taras Shevchenko Monument */
 <main class="pano">
 
 <iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/adUF1gbwpn"></iframe>
 
+<div id="transcript"></div>
 </main>
 <<include "footer360">>
 
@@ -250,7 +222,40 @@ His works are widely regarded as the foundation of modern Ukrainian literature a
        <a href="./../map.html"><button>Back to Map</button></a>
     </div>
   </div>
+  <div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+
+   <div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
+  </div>
+</div>  
 </footer>
+<<done>><<addclass "#playpause" "playhighlight">><</done>>
 
 
 

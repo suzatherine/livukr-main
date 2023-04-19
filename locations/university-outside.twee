@@ -200,21 +200,19 @@ setup.backThirty = () => {
 
 :: 360[nobr] {"position":"700,425","size":"100,100"}
 <<set $passage to "360">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to false>>
-<<set $showForwards to false>>
-<<set $showBackwards to false>>
 <<set $currentLocation to "Karazin National University - Outside">>
 <<set $transcript to false>>
 <<set $Panotitle to "Karazin National University - Outside">>
 <<set $transcriptname to  "360transcript">>
 <<include "headerpano">>
+<audio id="audio" autoplay>
+  <source src="https://withfireandrageliverpool.com/audio/IG/IG8-V1.mp3">
+</audio>
 <main class="pano">
 /* Karazin National University - Outside */
 <iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/rEqMkaylCF"></iframe>
 
-
+<div id="transcript"></div>
 </main>
 <<include "footer360">>
 
@@ -234,7 +232,40 @@ This has left millions of Ukrainians without access to education.
        <a href="./../map.html"><button>Back to Map</button></a>
     </div>
   </div>
+  <div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+
+   <div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
+  </div>
+</div>  
 </footer>
+<<done>><<addclass "#playpause" "playhighlight">><</done>>
 
 
 
