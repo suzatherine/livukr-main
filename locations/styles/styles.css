@@ -613,3 +613,11 @@ main.story > .mount > p {
 p.comment > .inline-img-icon {
   width: 25px;
 }
+
+main.pano {
+  margin-block-end: 3rem !important;
+}
+
+footer.pano {
+  position: inherit;
+}

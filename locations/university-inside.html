@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://C3A16691-C05E-47CA-B8E6-A1CC8346BED9// --><tw-storydata name="Investigation Ground University - Inside" startnode="7" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C3A16691-C05E-47CA-B8E6-A1CC8346BED9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<!-- UUID://C3A16691-C05E-47CA-B8E6-A1CC8349BED9// --><tw-storydata name="Investigation Ground University - Inside" startnode="5" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C3A16691-C05E-47CA-B8E6-A1CC8349BED9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
 @import url("./styles/generics.css");
 @import url("./styles/styles.css");</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
@@ -208,35 +208,7 @@ function log(msg) {
 
 // document.addEventListener("DOMContentLoaded", startup);
 
-// AUDIO CONTROLS
-// CAPTIONS
-setup.addCaptions = (cuekey) =>  {
-    const audio = document.getElementById("audio");
-     const track = audio.addTextTrack('subtitles', 'English', 'en');
-    track.mode = 'showing';
-    const cues = {
-      
-      mixtape: [[10.2,13.866,"Musician Stas Kononov continues to volunteer,"],[13.891,17.266,"distributing supplies to civilians and soldiers."],[17.291,22.49,"It is on the frontline, he begins to play again - concerts for the army."],[22.515,26.856,"Acoustic sounds, songs from his album he is yet to release"],[26.881,30.589,"and music he recorded in a legendary studio in Izium"],[30.614,35.156,"that has now been completely destroyed…"],[35.17,36.17,""]]}
-    for (let i=0; i<cues[cuekey].length; i++){
-    const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
-    track.addCue(cue); 
-}
-    track.addEventListener('cuechange', () => {
-    const activeCue = track.activeCues[0];
-    if (activeCue) {
-      document.getElementById('caption').textContent = activeCue.text;
-    }
-  });
-  console.log(audio.track)
 
-  const hideCap = () => {
-
-     track.mode = 'hidden';
-    document.getElementById("caption").style.visibility = "hidden";
-  }
-
- 
-}
 
 setup.play = () => {
  const audio = document.getElementById("audio")
@@ -272,127 +244,13 @@ setup.backThirty = () => {
   const audio = document.getElementById("audio");
   const timeHolder = audio.currentTime;
   audio.currentTime = timeHolder -30;
-  }</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="header" tags="nobr" position="100,225" size="100,100">&lt;header&gt;
-&lt;div class=&quot;header-item&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;header-item&quot;&gt;
-  &lt;h1&gt;$title&lt;/h1&gt;
-  &lt;h3 class=&quot;subtitle&quot;&gt;With Fire &amp; Rage&lt;/h3&gt;
-&lt;/div &gt;
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footer" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
-&lt;&lt;if $showBackwards is true&gt;&gt;
-  &lt;div class=&quot;nav-wrapper&quot;&gt;
+  }</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="headerpano" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;pano ar&quot; &gt;
+ &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
-        [img[Back|assets/img/backward.png][$prevpass]]
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;&lt;/if&gt;&gt;
-
-  &lt;&lt;if $showMap is true&gt;&gt;
-    &lt;div class=&quot;nav-wrapper&quot;&gt;
-      &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link [img[assets/img/map.png]]&gt;&gt;&lt;&lt;toggleclass &quot;#map&quot; &quot;hide&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $showAudio is true&gt;&gt;
-   &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
- &lt;&lt;link [img[assets/img/play.png]]&gt;&gt;&lt;&lt;replace &quot;#audio&quot;&gt;&gt;&lt;p&gt;[audio playing...]&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
-   &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;&lt;/if&gt;&gt;
-    &lt;&lt;if $showReplay is true&gt;&gt;
-     &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-    [img[Replay|assets/img/replay.png][$passage]]
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;&lt;/if&gt;&gt;
-
-     &lt;&lt;if $showCaptionsIcon is true&gt;&gt;
-     &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-  &lt;&lt;link [img[assets/img/captions.png]]&gt;&gt;&lt;&lt;set $captions to !$captions&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/link&gt;&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $showForwards is true&gt;&gt;
-    &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-         [img[Forward|assets/img/forward.png][$nextpass]]
-    &lt;/div&gt;
-  &lt;/div&gt;
-     &lt;&lt;/if&gt;&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="footerstory" tags="nobr" position="475,100" size="100,100">&lt;footer&gt;
-
-&lt;&lt;if $showCaptionsIcon is true&gt;&gt;
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-      &lt;&lt;link [img[assets/img/captions.png]]&gt;&gt;
-      &lt;&lt;if $captionToggle is true&gt;&gt;
-          &lt;&lt;set $captionToggle to false&gt;&gt;
-      &lt;&lt;set $fn to setup.hideCap()&gt;&gt;
-          &lt;&lt;else&gt;&gt;
-          &lt;&lt;set $captionToggle to true&gt;&gt;
-      &lt;&lt;set $fn to setup.showCap()&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-  &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
-
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link &quot;-30s&quot;&gt;&gt;
-&lt;&lt;set $fn to setup.backThirty()&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;nav-wrapper playpause-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot; id=&quot;playpause&quot;&gt;
-      &lt;&lt;link [img[assets/img/playpause.png]]&gt;&gt;
-        &lt;&lt;if $playToggle is false&gt;&gt;
-      &lt;&lt;set $fn to setup.play()&gt;&gt;
-      &lt;&lt;set $playToggle to true&gt;&gt;
-      &lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
-      &lt;&lt;else&gt;&gt;
-       &lt;&lt;set $fn to setup.pause()&gt;&gt;
-        &lt;&lt;set $playToggle to false&gt;&gt;
-      &lt;&lt;removeclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
-      &lt;&lt;/if&gt;&gt;
-      &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link &quot;+30s&quot;&gt;&gt;
-      &lt;&lt;set $fn to setup.addThirty()&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot;&gt;
-  &lt;&lt;link [img[assets/img/transcript.png]]&gt;&gt;
-&lt;&lt;if $transcript is false&gt;&gt;
-  &lt;&lt;set $transcript to true&gt;&gt;
-  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
-    &lt;&lt;include &quot;audiotranscript&quot;&gt;&gt;
-  &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;else&gt;&gt;
-  &lt;&lt;set $transcript to false&gt;&gt;
-  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
-  &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="audiotranscript" tags="" position="600,100" size="100,100">Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis, habitasse dictumst tempor nulla. Vivamus fames sapien aliquet torquent leo inceptos est, volutpat fusce turpis commodo varius nulla eget risus, condimentum consequat tempor ut pellentesque sociis. Metus netus sapien enim sollicitudin at tempus dictumst rutrum sociis, magnis bibendum dui suscipit augue ornare lectus per, pretium imperdiet erat platea accumsan magna nascetur ridiculus.</tw-passagedata><tw-passagedata pid="6" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+  &lt;h2&gt;$Panotitle&lt;/h2&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;    
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/backward.png][$prevpass]]
@@ -402,7 +260,7 @@ setup.backThirty = () => {
  
   &lt;/div&gt;
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="landing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="landing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $showMap to false&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
 &lt;&lt;set $showReplay to false&gt;&gt;
@@ -419,14 +277,26 @@ setup.backThirty = () => {
 &lt;&lt;button &quot;Show Me&quot;&gt;&gt;&lt;&lt;goto &quot;360&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="8" name="360" tags="nobr" position="700,425" size="100,100">&lt;&lt;set $passage to &quot;360&quot;&gt;&gt;
-&lt;main&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="5" name="360" tags="nobr" position="700,425" size="100,100">&lt;&lt;set $passage to &quot;360&quot;&gt;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to false&gt;&gt;
+&lt;&lt;set $showForwards to false&gt;&gt;
+&lt;&lt;set $showBackwards to false&gt;&gt;
+&lt;&lt;set $currentLocation to &quot;Karazin National University - Inside&quot;&gt;&gt;
+&lt;&lt;set $transcript to false&gt;&gt;
+&lt;&lt;set $Panotitle to &quot;Karazin National University - Inside&quot;&gt;&gt;
+&lt;&lt;set $transcriptname to  &quot;360transcript&quot;&gt;&gt;
+&lt;&lt;include &quot;headerpano&quot;&gt;&gt;
+
+&lt;main class=&quot;pano&quot;&gt;
 /* Karazin National University - Inside */
 &lt;iframe width=&quot;90%&quot; height=&quot;500px&quot; allowFullScreen=&quot;true&quot; allow=&quot;accelerometer; magnetometer; gyroscope&quot; style=&quot;display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);&quot; src=&quot;https://panoraven.com/en/embed/oPFGyVolQj&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;Please tap the arrow symbols (in the bottom right corner) to toggle fullscreen mode&lt;/p&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer360&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="footer360" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;&quot;&gt;
+&lt;&lt;include &quot;footer360&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="360transcript" tags="" position="725,100" size="100,100">One of the buildings of Karazin Kharkiv National University has been completely destroyed by shelling.
+
+Other attacks have damaged its Institute of Public Administration, and rockets have exploded in the university’s Rare Book Library, which housed 60,000 of the university’s books and manuscripts.</tw-passagedata><tw-passagedata pid="7" name="footer360" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;pano&quot;&gt;
     &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
        &lt;a href=&quot;./../map.html&quot;&gt;&lt;button&gt;Back to Map&lt;/button&gt;&lt;/a&gt;

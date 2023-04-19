@@ -202,9 +202,6 @@ setup.backThirty = () => {
 
 
 
-
-
-
 :: AR [nobr]{"position":"450,50","size":"100,100"}
 /* Drobitsky Yar Holocaust Memorial */
 <<set $prevpass to "AR">>

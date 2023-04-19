@@ -7,7 +7,7 @@ Investigation Ground University
 	"ifid": "C3A16691-C05E-47CA-B8E6-A1CC8346BED9",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "landing",
+	"start": "360",
 	"zoom": 0.6
 }
 
@@ -54,23 +54,7 @@ const handleStart = (evt) =>{
     //  reveal.classList.add("transparent");  
      initial.classList.add("transparent");  
      console.log(reveal)
-//       setTimeout(() => {
-//     initial.classList.add("hide"); 
-// }, "1000");
-   
-//   initial.classList.add("dissolve");  
-//    stat.classList.add("appear"); 
-//   setTimeout(() => {
-//     initial.classList.add("hide"); 
-//   // stat.classList.add("dissolve"); 
-//   // reveal.classList.add("dissolve"); 
-// }, "5000");
-//  setTimeout(() => {
-//     // initial.classList.add("hide"); 
-//   stat.classList.add("hide"); 
-//   // reveal.classList.add("dissolve"); 
-// }, "6000");
-  // el.classList.remove("hide"); 
+
   
 }
 
@@ -144,35 +128,7 @@ function log(msg) {
 
 // document.addEventListener("DOMContentLoaded", startup);
 
-// AUDIO CONTROLS
-// CAPTIONS
-setup.addCaptions = (cuekey) =>  {
-    const audio = document.getElementById("audio");
-     const track = audio.addTextTrack('subtitles', 'English', 'en');
-    track.mode = 'showing';
-    const cues = {
-      
-      mixtape: [[10.2,13.866,"Musician Stas Kononov continues to volunteer,"],[13.891,17.266,"distributing supplies to civilians and soldiers."],[17.291,22.49,"It is on the frontline, he begins to play again - concerts for the army."],[22.515,26.856,"Acoustic sounds, songs from his album he is yet to release"],[26.881,30.589,"and music he recorded in a legendary studio in Izium"],[30.614,35.156,"that has now been completely destroyed…"],[35.17,36.17,""]]}
-    for (let i=0; i<cues[cuekey].length; i++){
-    const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
-    track.addCue(cue); 
-}
-    track.addEventListener('cuechange', () => {
-    const activeCue = track.activeCues[0];
-    if (activeCue) {
-      document.getElementById('caption').textContent = activeCue.text;
-    }
-  });
-  console.log(audio.track)
 
-  const hideCap = () => {
-
-     track.mode = 'hidden';
-    document.getElementById("caption").style.visibility = "hidden";
-  }
-
- 
-}
 
 setup.play = () => {
  const audio = document.getElementById("audio")
@@ -217,141 +173,15 @@ setup.backThirty = () => {
 
 
 
-:: header [nobr]{"position":"100,225","size":"100,100"}
-<header>
-<div class="header-item"></div>
-<div class="header-item">
-  <h1>$title</h1>
-  <h3 class="subtitle">With Fire & Rage</h3>
-</div >
+:: headerpano [nobr]{"position":"100,225","size":"100,100"}
+
+<header class="pano ar" >
+ <div class="nav-wrapper">
+    <div class="nav-item">
+  <h2>$Panotitle</h2>
+ </div>
+ </div>    
 </header>
-
-
-:: footer [nobr]{"position":"100,375","size":"100,100"}
-<footer>
-<<if $showBackwards is true>>
-  <div class="nav-wrapper">
-    <div class="nav-item">
-        [img[Back|assets/img/backward.png][$prevpass]]
-    </div>
-  </div>
-  <</if>>
-
-  <<if $showMap is true>>
-    <div class="nav-wrapper">
-      <div class="nav-item">
-    <<link [img[assets/img/map.png]]>><<toggleclass "#map" "hide">><</link>>
-    </div>
-  </div>
-  <</if>>
-  <<if $showAudio is true>>
-   <div class="nav-wrapper">
-    <div class="nav-item">
- <<link [img[assets/img/play.png]]>><<replace "#audio">><p>[audio playing...]</p><</replace>><</link>>
-   </div>
-  </div>
-  <</if>>
-    <<if $showReplay is true>>
-     <div class="nav-wrapper">
-    <div class="nav-item">
-    [img[Replay|assets/img/replay.png][$passage]]
-    </div>
-    </div>
-    <</if>>
-
-     <<if $showCaptionsIcon is true>>
-     <div class="nav-wrapper">
-    <div class="nav-item">
-  <<link [img[assets/img/captions.png]]>><<set $captions to !$captions>><<goto $passage>><</link>>
-    </div>
-    </div>
-    <</if>>
-
-<<if $showForwards is true>>
-    <div class="nav-wrapper">
-    <div class="nav-item">
-         [img[Forward|assets/img/forward.png][$nextpass]]
-    </div>
-  </div>
-     <</if>>
-</footer>
-
-:: footerstory [nobr]
-
-<footer>
-
-<<if $showCaptionsIcon is true>>
-<div class="nav-wrapper">
-    <div class="nav-item">
-      <<link [img[assets/img/captions.png]]>>
-      <<if $captionToggle is true>>
-          <<set $captionToggle to false>>
-      <<set $fn to setup.hideCap()>>
-          <<else>>
-          <<set $captionToggle to true>>
-      <<set $fn to setup.showCap()>>
-        <</if>>
-      <</link>>
-</div>
-  </div>
-<</if>>
-
-
-<div class="nav-wrapper">
-  <div class="nav-item">
-    <<link "-30s">>
-<<set $fn to setup.backThirty()>>
-  <</link>>
-  </div>
-</div>
-
-<div class="nav-wrapper playpause-wrapper">
-  <div class="nav-item" id="playpause">
-      <<link [img[assets/img/playpause.png]]>>
-        <<if $playToggle is false>>
-      <<set $fn to setup.play()>>
-      <<set $playToggle to true>>
-      <<addclass "#playpause" "playhighlight">>
-      <<else>>
-       <<set $fn to setup.pause()>>
-        <<set $playToggle to false>>
-      <<removeclass "#playpause" "playhighlight">>
-      <</if>>
-      <</link>>
-  </div>
-</div>
-
-<div class="nav-wrapper">
-  <div class="nav-item">
-    <<link "+30s">>
-      <<set $fn to setup.addThirty()>>
-  <</link>>
-  </div>
-</div>
-
-<div class="nav-wrapper">
-  <div class="nav-item">
-  <<link [img[assets/img/transcript.png]]>>
-<<if $transcript is false>>
-  <<set $transcript to true>>
-  <<replace "#transcript">>
-    <<include "audiotranscript">>
-  <</replace>>
-  <<else>>
-  <<set $transcript to false>>
-  <<replace "#transcript">>
-  <</replace>>
-  <</if>>
-  <</link>>
-  </div>
-</div>
-
-</footer>
-
-
-:: audiotranscript
-Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis, habitasse dictumst tempor nulla. Vivamus fames sapien aliquet torquent leo inceptos est, volutpat fusce turpis commodo varius nulla eget risus, condimentum consequat tempor ut pellentesque sociis. Metus netus sapien enim sollicitudin at tempus dictumst rutrum sociis, magnis bibendum dui suscipit augue ornare lectus per, pretium imperdiet erat platea accumsan magna nascetur ridiculus.
-
 
 :: footerback [nobr]{"position":"100,375","size":"100,100"}
 <footer>
@@ -368,40 +198,37 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 
 
 
-
-:: landing [nobr] {"position":"700,175","size":"100,100"}
-<<set $passage to "landing">>
+:: 360[nobr] {"position":"700,425","size":"100,100"}
+<<set $passage to "360">>
 <<set $showMap to false>>
 <<set $showAudio to false>>
 <<set $showReplay to false>>
 <<set $showForwards to false>>
 <<set $showBackwards to false>>
-<<set $showCaptionsIcon to false>>
 <<set $currentLocation to "Karazin National University - Outside">>
-<main class="landing">
-
-<p>Stand in front of x</p>
-<p>Hold up your phone and rotate in a circle</p>
-
-<div class="nav-wrapper">
-<<button "Show Me">><<goto "360">><</button>>
-</div>
-
-</main>
-
-
-:: 360[nobr] {"position":"700,425","size":"100,100"}
-<<set $passage to "360">>
-<main>
+<<set $transcript to false>>
+<<set $Panotitle to "Karazin National University - Outside">>
+<<set $transcriptname to  "360transcript">>
+<<include "headerpano">>
+<main class="pano">
 /* Karazin National University - Outside */
 <iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/rEqMkaylCF"></iframe>
 
-<p>Please tap the arrow symbols (in the bottom right corner) to toggle fullscreen mode</p>
+
 </main>
 <<include "footer360">>
 
+
+:: 360transcript
+
+Karazin Kharkiv National University is one of many universities and nearly a quarter of all schools, that have been damaged or destroyed since the beginning of the full-scale invasion. 
+
+This has left millions of Ukrainians without access to education. 
+
+
+
 :: footer360 [nobr]{"position":"100,375","size":"100,100"}
-<footer class="">
+<footer class="pano">
     <div class="nav-wrapper">
     <div class="nav-item">
        <a href="./../map.html"><button>Back to Map</button></a>
