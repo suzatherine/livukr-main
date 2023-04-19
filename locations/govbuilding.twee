@@ -197,30 +197,29 @@ setup.backThirty = () => {
 
 :: 360[nobr] {"position":"700,425","size":"100,100"}
 <<set $passage to "360">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to false>>
-<<set $showForwards to false>>
-<<set $showBackwards to false>>
 <<set $currentLocation to "Kharkiv Government Building">>
 <<set $transcript to false>>
 <<set $Panotitle to "Kharkiv Government Building">>
 <<set $transcriptname to  "360transcript">>
 <<include "headerpano">>
+<audio id="audio" autoplay>
+  <source src="https://withfireandrageliverpool.com/audio/IG/IG10-V1.mp3">
 
+</audio>
 <main class="pano">
 /* Kharkiv Government Building */
 <iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/SHhAINaMQP"></iframe>
 
-
+<div id="transcript"></div>
 </main>
 <<include "footer360">>
 
 
-:: 360transcript
-One of the buildings of Karazin Kharkiv National University has been completely destroyed by shelling.
 
-Other attacks have damaged its Institute of Public Administration, and rockets have exploded in the university’s Rare Book Library, which housed 60,000 of the university’s books and manuscripts.
+:: 360transcript
+Russian soldiers launched two rockets that targeted the Kharkiv government building. 
+
+This resulted in the death of an estimated 29 people and 35 wounded.
 
 
 
@@ -231,8 +230,40 @@ Other attacks have damaged its Institute of Public Administration, and rockets h
        <a href="./../map.html"><button>Back to Map</button></a>
     </div>
   </div>
-</footer>
+  <div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
 
+   <div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
+  </div>
+</div>  
+</footer>
+<<done>><<addclass "#playpause" "playhighlight">><</done>>
 
 
 
