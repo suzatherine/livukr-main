@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spinnaker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 /* CONSTANTS  */
 
 :root {
@@ -14,8 +15,8 @@
   --color-purple: #140246;
   --color-pink: #ff007c;
   --color-orange: #f75146;
-  --font-headings: "Shippori Antique B1", sans-serif;
-  --font-body: "Shippori Antique B1", sans-serif;
+  --font-headings: "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
   --padding: 1.5rem;
 }
 
@@ -290,7 +291,7 @@ textarea {
 
 /* LANDING  */
 main.landing {
-  align-items: left;
+  align-items: center;
   height: 100vh;
 }
 
