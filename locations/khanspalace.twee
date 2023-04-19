@@ -198,7 +198,9 @@ setup.backThirty = () => {
 <<set $transcript to false>>
 <<set $ARtitle to "Khan's Palace">>
 <<set $transcriptname to  "ARtranscript">>
- /* <<audio ":all" stop>><<audio "5" play>> */
+<audio id="audio" autoplay>
+  <source src="https://withfireandrageliverpool.com/audio/IG/IG11-V1.mp3">
+</audio>
 <<include "headerAR">>
 /* OPEN */
 <main class="ar">
@@ -219,18 +221,36 @@ setup.backThirty = () => {
 <<done>><<set $s to setup.startup()>><</done>>
 
 :: ARtranscript
-The majority of the windows of Kharkiv Fine Arts Museum were blown out by a number of airstrikes. 
+Russia has taken over thousands of Crimean sites of national and local importance. Undertaking unauthorized excavations and construction.  
 
-Inside is one of the largest collections of the fine and applied arts in Ukraine.
+This includes Khan’s Palace, a 16th-century place of cultural importance to Crimean Tatars. Construction has threatened the monument’s conservation. 
+
+In February 2022, Russian authorities imprisoned Crimean Tatar architect Edem Dudakov, after he posted messages on Facebook criticizing the construction work.
 
 
 :: footerAR [nobr]{"position":"100,375","size":"100,100"}
 <footer class="ar">
-  <div class="nav-wrapper">
+    <div class="nav-wrapper">
     <div class="nav-item">
        <a href="./../map.html"><button>Back to Map</button></a>
     </div>
-    </div>
+  </div>
+  <div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+
    <div class="nav-wrapper">
   <div class="nav-item">
   <<link [img[assets/img/transcript.png]]>>
@@ -248,7 +268,7 @@ Inside is one of the largest collections of the fine and applied arts in Ukraine
   </div>
 </div>  
 </footer>
-
+<<done>><<addclass "#playpause" "playhighlight">><</done>>
 
 
 

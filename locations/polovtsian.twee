@@ -198,9 +198,11 @@ setup.backThirty = () => {
 <<set $transcript to false>>
 <<set $ARtitle to "Polovtsian Stone Statues">>
 <<set $transcriptname to  "ARtranscript">>
- /* <<audio ":all" stop>><<audio "5" play>> */
+
 <<include "headerAR">>
-/* OPEN */
+<audio id="audio" autoplay>
+  <source src="https://withfireandrageliverpool.com/audio/IG/IG6-V1.mp3">
+</audio>
 <main class="ar">
 
  <div class="ar-imgs-container one" id="ARContainer">
@@ -227,14 +229,29 @@ The “stone babas” are the unique burial statues of the Polovtsian nomadic tr
 They date back from the 9th to the 13th century, representing warrior men and women, their clothes, weapons, and jewellery. The Polovtsians created many of these statues, to worship their ancestors.
 
 
-
 :: footerAR [nobr]{"position":"100,375","size":"100,100"}
 <footer class="ar">
-  <div class="nav-wrapper">
+    <div class="nav-wrapper">
     <div class="nav-item">
        <a href="./../map.html"><button>Back to Map</button></a>
     </div>
-    </div>
+  </div>
+  <div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+
    <div class="nav-wrapper">
   <div class="nav-item">
   <<link [img[assets/img/transcript.png]]>>
@@ -252,8 +269,7 @@ They date back from the 9th to the 13th century, representing warrior men and wo
   </div>
 </div>  
 </footer>
-
-
+<<done>><<addclass "#playpause" "playhighlight">><</done>>
 
 
 

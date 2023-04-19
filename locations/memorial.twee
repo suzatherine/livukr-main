@@ -216,7 +216,9 @@ setup.backThirty = () => {
 <<set $transcript to false>>
 <<set $ARtitle to "Drobitsky Yar Holocaust Memorial">>
 <<set $transcriptname to  "ARtranscript">>
- /* <<audio ":all" stop>><<audio "5" play>> */
+<audio id="audio" autoplay>
+  <source src="https://withfireandrageliverpool.com/audio/IG/IG3-V1.mp3">
+</audio>
 <<include "headerAR">>
 /* OPEN */
 <main class="ar">
@@ -246,11 +248,27 @@ It is one of many Jewish memorials and religious sights that have been damaged b
 
 :: footerAR [nobr]{"position":"100,375","size":"100,100"}
 <footer class="ar">
-  <div class="nav-wrapper">
+    <div class="nav-wrapper">
     <div class="nav-item">
        <a href="./../map.html"><button>Back to Map</button></a>
     </div>
-    </div>
+  </div>
+  <div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+
    <div class="nav-wrapper">
   <div class="nav-item">
   <<link [img[assets/img/transcript.png]]>>
@@ -268,7 +286,7 @@ It is one of many Jewish memorials and religious sights that have been damaged b
   </div>
 </div>  
 </footer>
-
+<<done>><<addclass "#playpause" "playhighlight">><</done>>
 
 
 
