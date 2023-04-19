@@ -203,12 +203,14 @@ setup.backThirty = () => {
   <h2>$ARtitle</h2>
  </div>
  </div>
- <div class="nav-wrapper">
+ <div class="nav-wrapper" id="mount"></div>
+ 
+    <<timed 0.1s>><<replace "#mount">>
     <div class="nav-item">
-    <p class="comment">Press the photo <br> to see it transform</p>
+    <p class="comment">Press the image<br/>to see it transform </p>
     </div>
-    </div>
-    
+<</replace>>    <</timed>>
+
 </header>
 
 
@@ -246,7 +248,7 @@ setup.backThirty = () => {
 <<set $showCaptionsIcon to false>>
 <<set $transcript to false>>
 <<set $currentLocation to "The Maidan">>
-<<set $ARtitle to "The Maidan, 2014">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
 <<set $transcriptname to  "AR1transcript">>
  /* <<audio ":all" stop>><<audio "5" play>> */
 <<include "headerAR">>
@@ -261,10 +263,13 @@ setup.backThirty = () => {
         <img src="./assets/img/maidan1a.jpeg" class="">
         </div>
     </div>
-
+  <div id="ARmount"></div>
 <div id="transcript"></div>
 </main>
 <<include "footerMaidan">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise <br/>and press next </p>
+<</replace>>    <</timed>>
 <<done>><<set $s to setup.startup()>><</done>>
 
 :: AR1transcript
@@ -287,7 +292,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $ARtitle to "The Maidan, 2014">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
 <<set $transcriptname to  "AR2transcript">>
  /* <<audio ":all" stop>><<audio "5" play>> */
 <<include "headerAR">>
@@ -302,10 +307,13 @@ Many protestors were injured and over a hundred were killed. They are remembered
         <img src="./assets/img/maidan1b.jpeg" class="">
         </div>
     </div>
-
+  <div id="ARmount"></div>
 <div id="transcript"></div>
 </main>
 <<include "footerMaidan">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise <br/>and press next </p>
+<</replace>>    <</timed>>
 <<done>><<set $s to setup.startup()>><</done>>
 
 :: AR2transcript
@@ -329,7 +337,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $ARtitle to "The Maidan, 2014">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
 <<set $transcriptname to  "AR3transcript">>
  /* <<audio ":all" stop>><<audio "5" play>> */
 <<include "headerAR">>
@@ -344,10 +352,13 @@ Many protestors were injured and over a hundred were killed. They are remembered
         <img src="./assets/img/maidan1c.jpeg" class="">
         </div>
     </div>
-
+  <div id="ARmount"></div>
 <div id="transcript"></div>
 </main>
 <<include "footerMaidan">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise <br/>and press next </p>
+<</replace>>    <</timed>>
 <<done>><<set $s to setup.startup()>><</done>>
 
 :: AR3transcript
@@ -371,7 +382,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $ARtitle to "The Maidan, 2014">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
 <<set $transcriptname to  "AR4transcript">>
  /* <<audio ":all" stop>><<audio "5" play>> */
 <<include "headerAR">>
@@ -386,10 +397,13 @@ Many protestors were injured and over a hundred were killed. They are remembered
         <img src="./assets/img/maidan1d.jpeg" class="">
         </div>
     </div>
-
+  <div id="ARmount"></div>
 <div id="transcript"></div>
 </main>
 <<include "footerMaidan">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise <br/>and press next </p>
+<</replace>>    <</timed>>
 <<done>><<set $s to setup.startup()>><</done>>
 
 :: AR4transcript
@@ -413,7 +427,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $ARtitle to "The Maidan, 2014">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
 <<set $transcriptname to  "AR5transcript">>
  /* <<audio ":all" stop>><<audio "5" play>> */
 <<include "headerAR">>
@@ -428,10 +442,13 @@ Many protestors were injured and over a hundred were killed. They are remembered
         <img src="./assets/img/maidan1e.jpeg" class="">
         </div>
     </div>
-
+  <div id="ARmount"></div>
 <div id="transcript"></div>
 </main>
 <<include "footerAR">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise <br/>and press next </p>
+<</replace>>    <</timed>>
 <<done>><<set $s to setup.startup()>><</done>>
 
 :: AR5transcript

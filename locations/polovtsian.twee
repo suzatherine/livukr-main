@@ -211,10 +211,12 @@ setup.backThirty = () => {
       <img src="./assets/img/polovtsian1.jpeg" class="">
       </div>
   </div>
+
 <div id="transcript"></div>
 
 </main>
 <<include "footerAR">>
+
 <<done>><<set $s to setup.startup()>><</done>>
 
 :: ARtranscript

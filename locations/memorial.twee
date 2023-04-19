@@ -187,11 +187,6 @@ setup.backThirty = () => {
 </header>
 
 
-
-:: audiotranscript
-Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis, habitasse dictumst tempor nulla. Vivamus fames sapien aliquet torquent leo inceptos est, volutpat fusce turpis commodo varius nulla eget risus, condimentum consequat tempor ut pellentesque sociis. Metus netus sapien enim sollicitudin at tempus dictumst rutrum sociis, magnis bibendum dui suscipit augue ornare lectus per, pretium imperdiet erat platea accumsan magna nascetur ridiculus.
-
-
 :: footerback [nobr]{"position":"100,375","size":"100,100"}
 <footer>
   <div class="nav-wrapper">

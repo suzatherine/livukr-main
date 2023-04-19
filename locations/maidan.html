@@ -272,12 +272,14 @@ setup.backThirty = () => {
   &lt;h2&gt;$ARtitle&lt;/h2&gt;
  &lt;/div&gt;
  &lt;/div&gt;
- &lt;div class=&quot;nav-wrapper&quot;&gt;
+ &lt;div class=&quot;nav-wrapper&quot; id=&quot;mount&quot;&gt;&lt;/div&gt;
+ 
+    &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;p class=&quot;comment&quot;&gt;Press the photo &lt;br&gt; to see it transform&lt;/p&gt;
+    &lt;p class=&quot;comment&quot;&gt;Press the image&lt;br/&gt;to see it transform &lt;/p&gt;
     &lt;/div&gt;
-    &lt;/div&gt;
-    
+&lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
+
 &lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -300,7 +302,7 @@ setup.backThirty = () => {
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
 &lt;&lt;set $currentLocation to &quot;The Maidan&quot;&gt;&gt;
-&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan - Revolution Of Dignity&quot;&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;AR1transcript&quot;&gt;&gt;
  /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
 &lt;&lt;include &quot;headerAR&quot;&gt;&gt;
@@ -315,10 +317,13 @@ setup.backThirty = () => {
         &lt;img src=&quot;./assets/img/maidan1a.jpeg&quot; class=&quot;&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
+  &lt;div id=&quot;ARmount&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
+ &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
+    &lt;p class=&quot;comment&quot;&gt;Move around clockwise &lt;br/&gt;and press next &lt;/p&gt;
+&lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
 &lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="AR1transcript" tags="" position="600,100" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
 
 The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
@@ -335,7 +340,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan - Revolution Of Dignity&quot;&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;AR2transcript&quot;&gt;&gt;
  /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
 &lt;&lt;include &quot;headerAR&quot;&gt;&gt;
@@ -350,10 +355,13 @@ Many protestors were injured and over a hundred were killed. They are remembered
         &lt;img src=&quot;./assets/img/maidan1b.jpeg&quot; class=&quot;&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
+  &lt;div id=&quot;ARmount&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
+ &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
+    &lt;p class=&quot;comment&quot;&gt;Move around clockwise &lt;br/&gt;and press next &lt;/p&gt;
+&lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
 &lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="AR2transcript" tags="" position="850,100" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
 
 The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
@@ -370,7 +378,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan - Revolution Of Dignity&quot;&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;AR3transcript&quot;&gt;&gt;
  /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
 &lt;&lt;include &quot;headerAR&quot;&gt;&gt;
@@ -385,10 +393,13 @@ Many protestors were injured and over a hundred were killed. They are remembered
         &lt;img src=&quot;./assets/img/maidan1c.jpeg&quot; class=&quot;&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
+  &lt;div id=&quot;ARmount&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
+ &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
+    &lt;p class=&quot;comment&quot;&gt;Move around clockwise &lt;br/&gt;and press next &lt;/p&gt;
+&lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
 &lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AR3transcript" tags="" position="1100,100" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
 
 The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
@@ -405,7 +416,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan - Revolution Of Dignity&quot;&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;AR4transcript&quot;&gt;&gt;
  /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
 &lt;&lt;include &quot;headerAR&quot;&gt;&gt;
@@ -420,10 +431,13 @@ Many protestors were injured and over a hundred were killed. They are remembered
         &lt;img src=&quot;./assets/img/maidan1d.jpeg&quot; class=&quot;&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
+  &lt;div id=&quot;ARmount&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
+ &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
+    &lt;p class=&quot;comment&quot;&gt;Move around clockwise &lt;br/&gt;and press next &lt;/p&gt;
+&lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
 &lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="AR4transcript" tags="" position="100,225" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
 
 The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
@@ -440,7 +454,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan - Revolution Of Dignity&quot;&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;AR5transcript&quot;&gt;&gt;
  /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
 &lt;&lt;include &quot;headerAR&quot;&gt;&gt;
@@ -455,10 +469,13 @@ Many protestors were injured and over a hundred were killed. They are remembered
         &lt;img src=&quot;./assets/img/maidan1e.jpeg&quot; class=&quot;&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-
+  &lt;div id=&quot;ARmount&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerAR&quot;&gt;&gt;
+ &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
+    &lt;p class=&quot;comment&quot;&gt;Move around clockwise &lt;br/&gt;and press next &lt;/p&gt;
+&lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
 &lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="AR5transcript" tags="" position="350,225" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
 
 The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
