@@ -404,16 +404,18 @@ header.ar {
   background-color: var(--color-purple);
   justify-content: space-between;
   /* flex-direction: column; */
+  padding-bottom: 1rem;
 }
 
 header.ar > .nav-wrapper > .nav-item > h2 {
   font-size: 1.8rem;
-  font-size: 2.2rem;
   max-width: 80%;
+  margin-inline-end: 0;
 }
 
 header.ar > .nav-wrapper > .nav-item > p.comment {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
+  margin-block-end: 0;
 }
 
 .ar-option-wrapper {

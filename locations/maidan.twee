@@ -191,7 +191,7 @@ setup.backThirty = () => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "badjoke" "https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3">>
+<<cacheaudio "audio" "https://withfireandrageliverpool.com/audio/IG/IG2-V1.mp3">>
 <<waitforaudio>>
 
 
@@ -207,7 +207,7 @@ setup.backThirty = () => {
  
     <<timed 0.1s>><<replace "#mount">>
     <div class="nav-item">
-    <p class="comment">Press the image<br/>to see it transform </p>
+    <p class="comment">Press the image to see it transform </p>
     </div>
 <</replace>>    <</timed>>
 
@@ -239,14 +239,12 @@ setup.backThirty = () => {
 /* Maidan  */
 <<set $prevpass to "AR1">>
 <<set $passage to "AR1">>
-<<set $nextpass to "AR1">>
+<<set $nextpass to "AR2">>
 <<set $transcript to false>>
 <<set $currentLocation to "The Maidan">>
 <<set $ARtitle to "The Maidan - Revolution Of Dignity">>
 <<set $transcriptname to  "AR1transcript">>
-<audio id="audio" autoplay>
-  <source src="https://withfireandrageliverpool.com/audio/IG/IG2-V1.mp3">
-</audio>
+<<audio "audio" play>>
 <<include "headerAR">>
 /* OPEN */
 <main class="ar">
@@ -259,10 +257,32 @@ setup.backThirty = () => {
         <img src="./assets/img/maidan1a.jpeg" class="">
         </div>
     </div>
-<br>
-<br>
-<br>
-<br>
+
+
+  <div id="ARmount"></div>
+<div id="transcript"></div>
+</main>
+<<include "footerMaidan1">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise and click for the next image</p>
+<</replace>>    <</timed>>
+<<done>><<set $s to setup.startup()>><</done>>
+
+
+:: AR2 [nobr]{"position":"450,50","size":"100,100"}
+/* Maidan  */
+<<set $prevpass to "AR1">>
+<<set $passage to "AR2">>
+<<set $nextpass to "AR3">>
+<<set $transcript to false>>
+<<set $currentLocation to "The Maidan">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
+<<set $transcriptname to  "AR1transcript">>
+
+<<include "headerAR">>
+/* OPEN */
+<main class="ar">
+
     <div class="ar-imgs-container one" id="ARContainer">
       <div class="hidden-img-wrapper touch transparent" id="reveal" >
           <img src="./assets/img/maidan2b.jpeg" class="">
@@ -271,11 +291,32 @@ setup.backThirty = () => {
         <img src="./assets/img/maidan1b.jpeg" class="">
         </div>
     </div>
-<br>
-<br>
-<br>
-<br>
-    <div class="ar-imgs-container one" id="ARContainer">
+
+  <div id="ARmount"></div>
+<div id="transcript"></div>
+</main>
+<<include "footerMaidan">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise and click for the next image</p>
+<</replace>>    <</timed>>
+<<done>><<set $s to setup.startup()>><</done>>
+
+
+:: AR3 [nobr]{"position":"450,50","size":"100,100"}
+/* Maidan  */
+<<set $prevpass to "AR2">>
+<<set $passage to "AR3">>
+<<set $nextpass to "AR4">>
+<<set $transcript to false>>
+<<set $currentLocation to "The Maidan">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
+<<set $transcriptname to  "AR1transcript">>
+
+<<include "headerAR">>
+/* OPEN */
+<main class="ar">
+
+   <div class="ar-imgs-container one" id="ARContainer">
       <div class="hidden-img-wrapper touch transparent" id="reveal" >
           <img src="./assets/img/maidan2c.jpeg" class="">
         </div>
@@ -283,10 +324,30 @@ setup.backThirty = () => {
         <img src="./assets/img/maidan1c.jpeg" class="">
         </div>
     </div>
-<br>
-<br>
-<br>
-<br>
+
+  <div id="ARmount"></div>
+<div id="transcript"></div>
+</main>
+<<include "footerMaidan">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise and click for the next image</p>
+<</replace>>    <</timed>>
+<<done>><<set $s to setup.startup()>><</done>>
+
+
+:: AR4 [nobr]{"position":"450,50","size":"100,100"}
+/* Maidan  */
+<<set $prevpass to "AR3">>
+<<set $passage to "AR4">>
+<<set $nextpass to "AR5">>
+<<set $transcript to false>>
+<<set $currentLocation to "The Maidan">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
+<<set $transcriptname to  "AR1transcript">>
+
+<<include "headerAR">>
+/* OPEN */
+<main class="ar">
     <div class="ar-imgs-container one" id="ARContainer">
       <div class="hidden-img-wrapper touch transparent" id="reveal" >
           <img src="./assets/img/maidan2d.jpeg" class="">
@@ -295,11 +356,29 @@ setup.backThirty = () => {
         <img src="./assets/img/maidan1d.jpeg" class="">
         </div>
     </div>
-<br>
-<br>
-<br>
-<br>
-    <div class="ar-imgs-container one" id="ARContainer">
+  <div id="ARmount"></div>
+<div id="transcript"></div>
+</main>
+<<include "footerMaidan">>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise and click for the next image</p>
+<</replace>>    <</timed>>
+<<done>><<set $s to setup.startup()>><</done>>
+
+:: AR5 [nobr]{"position":"450,50","size":"100,100"}
+/* Maidan  */
+<<set $prevpass to "AR4">>
+<<set $passage to "AR5">>
+<<set $nextpass to "AR5">>
+<<set $transcript to false>>
+<<set $currentLocation to "The Maidan">>
+<<set $ARtitle to "The Maidan - Revolution Of Dignity">>
+<<set $transcriptname to  "AR1transcript">>
+
+<<include "headerAR">>
+/* OPEN */
+<main class="ar">
+  <div class="ar-imgs-container one" id="ARContainer">
       <div class="hidden-img-wrapper touch transparent" id="reveal" >
           <img src="./assets/img/maidan2e.jpeg" class="">
         </div>
@@ -311,8 +390,8 @@ setup.backThirty = () => {
 <div id="transcript"></div>
 </main>
 <<include "footerAR">>
- <<timed 6s>><<replace "#mount">>
-    <p class="comment">Scroll down to the next image  <br/>and move around clockwise </p>
+ <<timed 6s>><<replace "#ARmount">>
+    <p class="comment">Move around clockwise and click for the next image</p>
 <</replace>>    <</timed>>
 <<done>><<set $s to setup.startup()>><</done>>
 
@@ -334,7 +413,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
        <a href="./../map.html"><button>Back to Map</button></a>
     </div>
   </div>
-  <div class="nav-wrapper playpause-wrapper">
+  /* <div class="nav-wrapper playpause-wrapper">
   <div class="nav-item" id="playpause">
       <<link [img[assets/img/playpause.png]]>>
         <<if $playToggle is false>>
@@ -348,7 +427,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
       <</if>>
       <</link>>
   </div>
-</div>
+</div> */
 
    <div class="nav-wrapper">
   <div class="nav-item">
@@ -367,7 +446,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
   </div>
 </div>  
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>
+/* <<done>><<addclass "#playpause" "playhighlight">><</done>> */
 
 
 
@@ -378,24 +457,9 @@ Many protestors were injured and over a hundred were killed. They are remembered
 
   <div class="nav-wrapper">
     <div class="nav-item">
-        [img[Back|./assets/img/back.png][$prevpass]]
+        [img[Back|/assets/img/back.png][$prevpass]]
     </div>
   </div>
-<div class="nav-wrapper playpause-wrapper">
-  <div class="nav-item" id="playpause">
-      <<link [img[assets/img/playpause.png]]>>
-        <<if $playToggle is false>>
-      <<set $fn to setup.play()>>
-      <<set $playToggle to true>>
-      <<addclass "#playpause" "playhighlight">>
-      <<else>>
-       <<set $fn to setup.pause()>>
-        <<set $playToggle to false>>
-      <<removeclass "#playpause" "playhighlight">>
-      <</if>>
-      <</link>>
-  </div>
-</div>
 
    <div class="nav-wrapper">
   <div class="nav-item">
@@ -419,4 +483,35 @@ Many protestors were injured and over a hundred were killed. They are remembered
     </div>
   </div>
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>
+
+
+:: footerMaidan1 [nobr]{"position":"100,375","size":"100,100"}
+<footer class="ar">
+
+   <div class="nav-wrapper">
+    <div class="nav-item">
+       <a href="./../map.html"><img src="assets/img/back.png"></a>
+    </div>
+  </div>
+   <div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
+  </div>
+</div>  
+    <div class="nav-wrapper">
+    <div class="nav-item">
+       <<button "Next">><<goto $nextpass>><</button>>
+    </div>
+  </div>
+</footer>
