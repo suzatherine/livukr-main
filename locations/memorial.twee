@@ -274,16 +274,7 @@ It is one of many Jewish memorials and religious sights that have been damaged b
   <</if>>
   <</link>>
   </div>
-</div>
- /* <<if $showReplay is true>>
-     <div class="nav-wrapper">
-    <div class="nav-item">
-    [img[Replay|assets/img/replay.png][$passage]]
-    </div>
-    </div>
-    <</if>> */
-   
-  
+</div>  
 </footer>
 
 

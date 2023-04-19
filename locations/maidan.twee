@@ -235,7 +235,7 @@ setup.backThirty = () => {
 
 :: AR1 [nobr]{"position":"450,50","size":"100,100"}
 /* Maidan  */
-<<set $prevpass to "landing">>
+<<set $prevpass to "AR1">>
 <<set $passage to "AR1">>
 <<set $nextpass to "AR2">>
 <<set $showMap to false>>
@@ -278,7 +278,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
 
 :: AR2 [nobr]{"position":"450,50","size":"100,100"}
 /* Maidan  */
-<<set $prevpass to "landing">>
+<<set $prevpass to "AR1">>
 <<set $passage to "AR2">>
 <<set $nextpass to "AR3">>
 <<set $showMap to false>>
