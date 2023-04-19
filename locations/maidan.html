@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://C3A16691-C05E-47CA-B8E6-A1CC8300BED9// --><tw-storydata name="Investigation Ground Maidan" startnode="7" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C3A16691-C05E-47CA-B8E6-A1CC8300BED9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<!-- UUID://C3A16691-C05E-47CA-B8E6-A1CC8300BED9// --><tw-storydata name="Investigation Ground Maidan" startnode="4" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C3A16691-C05E-47CA-B8E6-A1CC8300BED9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
 @import url("./styles/generics.css");
 @import url("./styles/styles.css");</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
@@ -266,127 +266,19 @@ setup.backThirty = () => {
   const timeHolder = audio.currentTime;
   audio.currentTime = timeHolder -30;
   }</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;badjoke&quot; &quot;https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3&quot;&gt;&gt;
-&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="nobr" position="100,225" size="100,100">&lt;header&gt;
-&lt;div class=&quot;header-item&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;header-item&quot;&gt;
-  &lt;h1&gt;$title&lt;/h1&gt;
-  &lt;h3 class=&quot;subtitle&quot;&gt;With Fire &amp; Rage&lt;/h3&gt;
-&lt;/div &gt;
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footer" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
-&lt;&lt;if $showBackwards is true&gt;&gt;
-  &lt;div class=&quot;nav-wrapper&quot;&gt;
+&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="headerAR" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;ar&quot; &gt;
+ &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
-        [img[Back|assets/img/backward.png][$prevpass]]
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;&lt;/if&gt;&gt;
-
-  &lt;&lt;if $showMap is true&gt;&gt;
-    &lt;div class=&quot;nav-wrapper&quot;&gt;
-      &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link [img[assets/img/map.png]]&gt;&gt;&lt;&lt;toggleclass &quot;#map&quot; &quot;hide&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $showAudio is true&gt;&gt;
-   &lt;div class=&quot;nav-wrapper&quot;&gt;
+  &lt;h2&gt;$ARtitle&lt;/h2&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
- &lt;&lt;link [img[assets/img/play.png]]&gt;&gt;&lt;&lt;replace &quot;#audio&quot;&gt;&gt;&lt;p&gt;[audio playing...]&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
-   &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;&lt;/if&gt;&gt;
-    &lt;&lt;if $showReplay is true&gt;&gt;
-     &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-    [img[Replay|assets/img/replay.png][$passage]]
+    &lt;p class=&quot;comment&quot;&gt;Press the photo &lt;br&gt; to see it transform&lt;/p&gt;
     &lt;/div&gt;
     &lt;/div&gt;
-    &lt;&lt;/if&gt;&gt;
-
-     &lt;&lt;if $showCaptionsIcon is true&gt;&gt;
-     &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-  &lt;&lt;link [img[assets/img/captions.png]]&gt;&gt;&lt;&lt;set $captions to !$captions&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/link&gt;&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $showForwards is true&gt;&gt;
-    &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-         [img[Forward|assets/img/forward.png][$nextpass]]
-    &lt;/div&gt;
-  &lt;/div&gt;
-     &lt;&lt;/if&gt;&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="footerstory" tags="nobr" position="475,100" size="100,100">&lt;footer&gt;
-
-&lt;&lt;if $showCaptionsIcon is true&gt;&gt;
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-      &lt;&lt;link [img[assets/img/captions.png]]&gt;&gt;
-      &lt;&lt;if $captionToggle is true&gt;&gt;
-          &lt;&lt;set $captionToggle to false&gt;&gt;
-      &lt;&lt;set $fn to setup.hideCap()&gt;&gt;
-          &lt;&lt;else&gt;&gt;
-          &lt;&lt;set $captionToggle to true&gt;&gt;
-      &lt;&lt;set $fn to setup.showCap()&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-  &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
-
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link &quot;-30s&quot;&gt;&gt;
-&lt;&lt;set $fn to setup.backThirty()&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;nav-wrapper playpause-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot; id=&quot;playpause&quot;&gt;
-      &lt;&lt;link [img[assets/img/playpause.png]]&gt;&gt;
-        &lt;&lt;if $playToggle is false&gt;&gt;
-      &lt;&lt;set $fn to setup.play()&gt;&gt;
-      &lt;&lt;set $playToggle to true&gt;&gt;
-      &lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
-      &lt;&lt;else&gt;&gt;
-       &lt;&lt;set $fn to setup.pause()&gt;&gt;
-        &lt;&lt;set $playToggle to false&gt;&gt;
-      &lt;&lt;removeclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
-      &lt;&lt;/if&gt;&gt;
-      &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;&lt;link &quot;+30s&quot;&gt;&gt;
-      &lt;&lt;set $fn to setup.addThirty()&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-  &lt;div class=&quot;nav-item&quot;&gt;
-  &lt;&lt;link [img[assets/img/transcript.png]]&gt;&gt;
-&lt;&lt;if $transcript is false&gt;&gt;
-  &lt;&lt;set $transcript to true&gt;&gt;
-  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
-    &lt;&lt;include &quot;audiotranscript&quot;&gt;&gt;
-  &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;else&gt;&gt;
-  &lt;&lt;set $transcript to false&gt;&gt;
-  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
-  &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="audiotranscript" tags="" position="600,100" size="100,100">Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis, habitasse dictumst tempor nulla. Vivamus fames sapien aliquet torquent leo inceptos est, volutpat fusce turpis commodo varius nulla eget risus, condimentum consequat tempor ut pellentesque sociis. Metus netus sapien enim sollicitudin at tempus dictumst rutrum sociis, magnis bibendum dui suscipit augue ornare lectus per, pretium imperdiet erat platea accumsan magna nascetur ridiculus.</tw-passagedata><tw-passagedata pid="6" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+    
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/backward.png][$prevpass]]
@@ -396,35 +288,26 @@ setup.backThirty = () => {
  
   &lt;/div&gt;
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="landing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
-&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
-&lt;&lt;set $nextpass to &quot;AR1&quot;&gt;&gt;
-&lt;&lt;set $showMap to false&gt;&gt;
-&lt;&lt;set $showAudio to false&gt;&gt;
-&lt;&lt;set $showReplay to false&gt;&gt;
-&lt;&lt;set $showForwards to false&gt;&gt;
-&lt;&lt;set $showBackwards to false&gt;&gt;
-&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $currentLocation to &quot;The Maidan&quot;&gt;&gt;
-&lt;main class=&quot;landing&quot;&gt;
-
-&lt;p class=&quot;comment&quot;&gt;Stand across the road from the Walker Art Gallery &lt;/p&gt;
-&lt;p class=&quot;comment&quot;&gt;Face towards the large column&lt;/p&gt;
-&lt;p class=&quot;comment&quot;&gt;Hold up your phone &lt;/p&gt;
-
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-&lt;&lt;button &quot;Show Me&quot;&gt;&gt;&lt;&lt;goto &quot;AR1&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="8" name="AR1" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="AR1" tags="nobr" position="450,50" size="100,100">/* Maidan  */
 &lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR2&quot;&gt;&gt;
-/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
-&lt;main class=&quot;ar multiple&quot;&gt;
- &lt;div class=&quot;ar-wrapper&quot;&gt;
-    &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showBackwards to false&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+&lt;&lt;set $transcript to false&gt;&gt;
+&lt;&lt;set $currentLocation to &quot;The Maidan&quot;&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $transcriptname to  &quot;AR1transcript&quot;&gt;&gt;
+ /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
+&lt;&lt;include &quot;headerAR&quot;&gt;&gt;
+/* OPEN */
+&lt;main class=&quot;ar&quot;&gt;
+
+   &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
       &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
           &lt;img src=&quot;./assets/img/maidan2a.jpeg&quot; class=&quot;&quot;&gt;
         &lt;/div&gt;
@@ -432,138 +315,201 @@ setup.backThirty = () => {
         &lt;img src=&quot;./assets/img/maidan1a.jpeg&quot; class=&quot;&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
- &lt;/div&gt;
 
-
-
+&lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
-
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AR2" tags="nobr" position="450,50" size="100,100">/* Maidan  */
-&lt;&lt;set $prevpass to &quot;AR1&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="AR1transcript" tags="" position="600,100" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.</tw-passagedata><tw-passagedata pid="6" name="AR2" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR2&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR3&quot;&gt;&gt;
-/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $transcriptname to  &quot;AR2transcript&quot;&gt;&gt;
+ /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
+&lt;&lt;include &quot;headerAR&quot;&gt;&gt;
+/* OPEN */
 &lt;main class=&quot;ar&quot;&gt;
 
-  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
-    &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
-        &lt;img src=&quot;./assets/img/maidan2b.jpeg&quot; class=&quot;&quot;&gt;
-      &lt;/div&gt;
-    &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
-      &lt;img src=&quot;./assets/img/maidan1b.jpeg&quot; class=&quot;&quot;&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
+   &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+      &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
+          &lt;img src=&quot;./assets/img/maidan2b.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+      &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
+        &lt;img src=&quot;./assets/img/maidan1b.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-
+&lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="AR3" tags="nobr" position="450,50" size="100,100">/* Maidan  */
-&lt;&lt;set $prevpass to &quot;AR2&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="AR2transcript" tags="" position="850,100" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.</tw-passagedata><tw-passagedata pid="8" name="AR3" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR3&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR4&quot;&gt;&gt;
-/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $transcriptname to  &quot;AR3transcript&quot;&gt;&gt;
+ /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
+&lt;&lt;include &quot;headerAR&quot;&gt;&gt;
+/* OPEN */
 &lt;main class=&quot;ar&quot;&gt;
 
-  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
-    &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
-        &lt;img src=&quot;./assets/img/maidan2c.jpeg&quot; class=&quot;&quot;&gt;
-      &lt;/div&gt;
-    &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
-      &lt;img src=&quot;./assets/img/maidan1c.jpeg&quot; class=&quot;&quot;&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
+   &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+      &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
+          &lt;img src=&quot;./assets/img/maidan2c.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+      &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
+        &lt;img src=&quot;./assets/img/maidan1c.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-
+&lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="AR4" tags="nobr" position="450,50" size="100,100">/* Maidan  */
-&lt;&lt;set $prevpass to &quot;AR3&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AR3transcript" tags="" position="1100,100" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.</tw-passagedata><tw-passagedata pid="10" name="AR4" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR4&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR5&quot;&gt;&gt;
-/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $transcriptname to  &quot;AR4transcript&quot;&gt;&gt;
+ /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
+&lt;&lt;include &quot;headerAR&quot;&gt;&gt;
+/* OPEN */
 &lt;main class=&quot;ar&quot;&gt;
 
-  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
-    &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
-        &lt;img src=&quot;./assets/img/maidan2d.jpeg&quot; class=&quot;&quot;&gt;
-      &lt;/div&gt;
-    &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
-      &lt;img src=&quot;./assets/img/maidan1d.jpeg&quot; class=&quot;&quot;&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
+   &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+      &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
+          &lt;img src=&quot;./assets/img/maidan2d.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+      &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
+        &lt;img src=&quot;./assets/img/maidan1d.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="AR5" tags="nobr" position="450,50" size="100,100">/* Maidan  */
-&lt;&lt;set $prevpass to &quot;AR4&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="AR4transcript" tags="" position="100,225" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.</tw-passagedata><tw-passagedata pid="12" name="AR5" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;set $prevpass to &quot;landing&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR5&quot;&gt;&gt;
-&lt;&lt;set $nextpass to &quot;AR5&quot;&gt;&gt;
-/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;&lt;set $nextpass to &quot;A5&quot;&gt;&gt;
+&lt;&lt;set $showMap to false&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+&lt;&lt;set $ARtitle to &quot;The Maidan, 2014&quot;&gt;&gt;
+&lt;&lt;set $transcriptname to  &quot;AR5transcript&quot;&gt;&gt;
+ /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;5&quot; play&gt;&gt; */
+&lt;&lt;include &quot;headerAR&quot;&gt;&gt;
+/* OPEN */
 &lt;main class=&quot;ar&quot;&gt;
 
-  &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
-    &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
-        &lt;img src=&quot;./assets/img/maidan2e.jpeg&quot; class=&quot;&quot;&gt;
-      &lt;/div&gt;
-    &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
-      &lt;img src=&quot;./assets/img/maidan1e.jpeg&quot; class=&quot;&quot;&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
+   &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
+      &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
+          &lt;img src=&quot;./assets/img/maidan2e.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+      &lt;div class=&quot;ar-img-wrapper touch bottom&quot; id=&quot;initial&quot; &gt;
+        &lt;img src=&quot;./assets/img/maidan1e.jpeg&quot; class=&quot;&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-
+&lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerAR&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="AR5transcript" tags="" position="350,225" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.</tw-passagedata><tw-passagedata pid="14" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;div id=&quot;mount&quot;&gt; &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;&lt;/div&gt;
-    &lt;&lt;silently&gt;&gt;
-	&lt;&lt;repeat 10s&gt;&gt;
-    &lt;&lt;timed 0.1s&gt;&gt;
-      &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-         &lt;span&gt;When you’ve finished&lt;/span&gt; &lt;span&gt;listening let me know&lt;/span&gt;
-      &lt;&lt;/replace&gt;&gt;
-     &lt;&lt;/timed&gt;&gt;
-     &lt;&lt;timed 6s&gt;&gt;
-      &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-       &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;
-      &lt;&lt;/replace&gt;&gt;
-     &lt;&lt;/timed&gt;&gt;
-    &lt;&lt;/repeat&gt;&gt;
-&lt;&lt;/silently&gt;&gt;
-    &lt;/div&gt;&lt;/div&gt;
-    &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
        &lt;a href=&quot;./../map.html&quot;&gt;&lt;button&gt;Back to Map&lt;/button&gt;&lt;/a&gt;
     &lt;/div&gt;
+    &lt;/div&gt;
+   &lt;div class=&quot;nav-wrapper&quot;&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;
+  &lt;&lt;link [img[assets/img/transcript.png]]&gt;&gt;
+&lt;&lt;if $transcript is false&gt;&gt;
+  &lt;&lt;set $transcript to true&gt;&gt;
+  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
+    &lt;&lt;include $transcriptname&gt;&gt;
+  &lt;&lt;/replace&gt;&gt;
+  &lt;&lt;else&gt;&gt;
+  &lt;&lt;set $transcript to false&gt;&gt;
+  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
+  &lt;&lt;/replace&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
   &lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="14" name="footerMaidan" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+&lt;/div&gt;  
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="15" name="footerMaidan" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
 
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|./assets/img/back.png][$prevpass]]
     &lt;/div&gt;
   &lt;/div&gt;
-
-&lt;div class=&quot;nav-wrapper&quot;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;div id=&quot;mount&quot;&gt; &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;&lt;/div&gt;
-    &lt;&lt;silently&gt;&gt;
-	&lt;&lt;repeat 10s&gt;&gt;
-    &lt;&lt;timed 0.1s&gt;&gt;
-      &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-         &lt;span&gt;Move clockwise and click &lt;/span&gt; &lt;span&gt; to see the next image&lt;/span&gt;
-      &lt;&lt;/replace&gt;&gt;
-     &lt;&lt;/timed&gt;&gt;
-     &lt;&lt;timed 6s&gt;&gt;
-      &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-       &lt;span&gt;Press the image&lt;/span&gt; &lt;span&gt;to see it transform&lt;/span&gt;
-      &lt;&lt;/replace&gt;&gt;
-     &lt;&lt;/timed&gt;&gt;
-    &lt;&lt;/repeat&gt;&gt;
-&lt;&lt;/silently&gt;&gt;
- &lt;/div&gt;
+  &lt;div class=&quot;nav-wrapper&quot;&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;
+  &lt;&lt;link [img[assets/img/transcript.png]]&gt;&gt;
+&lt;&lt;if $transcript is false&gt;&gt;
+  &lt;&lt;set $transcript to true&gt;&gt;
+  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
+    &lt;&lt;include $transcriptname&gt;&gt;
+  &lt;&lt;/replace&gt;&gt;
+  &lt;&lt;else&gt;&gt;
+  &lt;&lt;set $transcript to false&gt;&gt;
+  &lt;&lt;replace &quot;#transcript&quot;&gt;&gt;
+  &lt;&lt;/replace&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
   &lt;/div&gt;
+&lt;/div&gt;
     &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
        &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;

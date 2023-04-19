@@ -389,15 +389,31 @@ main.ar.multiple > .ar-wrapper > .ar-imgs-container {
   width: 93%;
 }
 
-main.landing > p.comment,
-main.ar > p.comment {
+main.story > #mount > p.comment,
+.nav-item > #mount > span.comment,
+p.comment {
   background-color: var(--accent-color-secondary);
   padding: 6px 8px;
   border-radius: 10px;
   border: black 0.5px solid;
   color: black;
   width: fit-content;
-  line-height: 1.75;
+}
+
+header.ar {
+  background-color: var(--color-purple);
+  justify-content: space-between;
+  /* flex-direction: column; */
+}
+
+header.ar > .nav-wrapper > .nav-item > h2 {
+  font-size: 1.8rem;
+  font-size: 2.2rem;
+  max-width: 80%;
+}
+
+header.ar > .nav-wrapper > .nav-item > p.comment {
+  font-size: 1.3rem;
 }
 
 .ar-option-wrapper {
@@ -414,7 +430,7 @@ main.ar > p.comment {
 .ar-imgs-container {
   position: relative;
   width: 100%;
-  max-height: 50vh;
+  min-height: 50vh;
 }
 
 /* .ar-imgs-container.one {
@@ -590,4 +606,10 @@ main.story > .mount > p {
   100% {
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
   }
+}
+
+/* INVESTIGATION GROUND */
+
+p.comment > .inline-img-icon {
+  width: 25px;
 }

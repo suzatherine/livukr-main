@@ -7,7 +7,7 @@ Investigation Ground Maidan
 	"ifid": "C3A16691-C05E-47CA-B8E6-A1CC8300BED9",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "landing",
+	"start": "AR1",
 	"zoom": 0.6
 }
 
@@ -195,140 +195,23 @@ setup.backThirty = () => {
 <<waitforaudio>>
 
 
-:: header [nobr]{"position":"100,225","size":"100,100"}
-<header>
-<div class="header-item"></div>
-<div class="header-item">
-  <h1>$title</h1>
-  <h3 class="subtitle">With Fire & Rage</h3>
-</div >
+:: headerAR [nobr]{"position":"100,225","size":"100,100"}
+
+<header class="ar" >
+ <div class="nav-wrapper">
+    <div class="nav-item">
+  <h2>$ARtitle</h2>
+ </div>
+ </div>
+ <div class="nav-wrapper">
+    <div class="nav-item">
+    <p class="comment">Press the photo <br> to see it transform</p>
+    </div>
+    </div>
+    
 </header>
 
 
-:: footer [nobr]{"position":"100,375","size":"100,100"}
-<footer>
-<<if $showBackwards is true>>
-  <div class="nav-wrapper">
-    <div class="nav-item">
-        [img[Back|assets/img/backward.png][$prevpass]]
-    </div>
-  </div>
-  <</if>>
-
-  <<if $showMap is true>>
-    <div class="nav-wrapper">
-      <div class="nav-item">
-    <<link [img[assets/img/map.png]]>><<toggleclass "#map" "hide">><</link>>
-    </div>
-  </div>
-  <</if>>
-  <<if $showAudio is true>>
-   <div class="nav-wrapper">
-    <div class="nav-item">
- <<link [img[assets/img/play.png]]>><<replace "#audio">><p>[audio playing...]</p><</replace>><</link>>
-   </div>
-  </div>
-  <</if>>
-    <<if $showReplay is true>>
-     <div class="nav-wrapper">
-    <div class="nav-item">
-    [img[Replay|assets/img/replay.png][$passage]]
-    </div>
-    </div>
-    <</if>>
-
-     <<if $showCaptionsIcon is true>>
-     <div class="nav-wrapper">
-    <div class="nav-item">
-  <<link [img[assets/img/captions.png]]>><<set $captions to !$captions>><<goto $passage>><</link>>
-    </div>
-    </div>
-    <</if>>
-
-<<if $showForwards is true>>
-    <div class="nav-wrapper">
-    <div class="nav-item">
-         [img[Forward|assets/img/forward.png][$nextpass]]
-    </div>
-  </div>
-     <</if>>
-</footer>
-
-:: footerstory [nobr]
-
-<footer>
-
-<<if $showCaptionsIcon is true>>
-<div class="nav-wrapper">
-    <div class="nav-item">
-      <<link [img[assets/img/captions.png]]>>
-      <<if $captionToggle is true>>
-          <<set $captionToggle to false>>
-      <<set $fn to setup.hideCap()>>
-          <<else>>
-          <<set $captionToggle to true>>
-      <<set $fn to setup.showCap()>>
-        <</if>>
-      <</link>>
-</div>
-  </div>
-<</if>>
-
-
-<div class="nav-wrapper">
-  <div class="nav-item">
-    <<link "-30s">>
-<<set $fn to setup.backThirty()>>
-  <</link>>
-  </div>
-</div>
-
-<div class="nav-wrapper playpause-wrapper">
-  <div class="nav-item" id="playpause">
-      <<link [img[assets/img/playpause.png]]>>
-        <<if $playToggle is false>>
-      <<set $fn to setup.play()>>
-      <<set $playToggle to true>>
-      <<addclass "#playpause" "playhighlight">>
-      <<else>>
-       <<set $fn to setup.pause()>>
-        <<set $playToggle to false>>
-      <<removeclass "#playpause" "playhighlight">>
-      <</if>>
-      <</link>>
-  </div>
-</div>
-
-<div class="nav-wrapper">
-  <div class="nav-item">
-    <<link "+30s">>
-      <<set $fn to setup.addThirty()>>
-  <</link>>
-  </div>
-</div>
-
-<div class="nav-wrapper">
-  <div class="nav-item">
-  <<link [img[assets/img/transcript.png]]>>
-<<if $transcript is false>>
-  <<set $transcript to true>>
-  <<replace "#transcript">>
-    <<include "audiotranscript">>
-  <</replace>>
-  <<else>>
-  <<set $transcript to false>>
-  <<replace "#transcript">>
-  <</replace>>
-  <</if>>
-  <</link>>
-  </div>
-</div>
-
-</footer>
-
-
-:: audiotranscript
-Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis, habitasse dictumst tempor nulla. Vivamus fames sapien aliquet torquent leo inceptos est, volutpat fusce turpis commodo varius nulla eget risus, condimentum consequat tempor ut pellentesque sociis. Metus netus sapien enim sollicitudin at tempus dictumst rutrum sociis, magnis bibendum dui suscipit augue ornare lectus per, pretium imperdiet erat platea accumsan magna nascetur ridiculus.
 
 
 :: footerback [nobr]{"position":"100,375","size":"100,100"}
@@ -347,29 +230,6 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 
 
 
-:: landing [nobr] {"position":"700,175","size":"100,100"}
-<<set $prevpass to "landing">>
-<<set $passage to "landing">>
-<<set $nextpass to "AR1">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to false>>
-<<set $showForwards to false>>
-<<set $showBackwards to false>>
-<<set $showCaptionsIcon to false>>
-<<set $currentLocation to "The Maidan">>
-<main class="landing">
-
-<p class="comment">Stand across the road from the Walker Art Gallery </p>
-<p class="comment">Face towards the large column</p>
-<p class="comment">Hold up your phone </p>
-
-
-<div class="nav-wrapper">
-<<button "Show Me">><<goto "AR1">><</button>>
-</div>
-
-</main>
 
 
 
@@ -378,10 +238,22 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
 <<set $prevpass to "landing">>
 <<set $passage to "AR1">>
 <<set $nextpass to "AR2">>
-/* <<include "header">> */
-<main class="ar multiple">
- <div class="ar-wrapper">
-    <div class="ar-imgs-container one" id="ARContainer">
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to false>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $transcript to false>>
+<<set $currentLocation to "The Maidan">>
+<<set $ARtitle to "The Maidan, 2014">>
+<<set $transcriptname to  "AR1transcript">>
+ /* <<audio ":all" stop>><<audio "5" play>> */
+<<include "headerAR">>
+/* OPEN */
+<main class="ar">
+
+   <div class="ar-imgs-container one" id="ARContainer">
       <div class="hidden-img-wrapper touch transparent" id="reveal" >
           <img src="./assets/img/maidan2a.jpeg" class="">
         </div>
@@ -389,133 +261,211 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
         <img src="./assets/img/maidan1a.jpeg" class="">
         </div>
     </div>
- </div>
 
-
-
+<div id="transcript"></div>
 </main>
-
 <<include "footerMaidan">>
 <<done>><<set $s to setup.startup()>><</done>>
 
+:: AR1transcript
+In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.
 
 :: AR2 [nobr]{"position":"450,50","size":"100,100"}
 /* Maidan  */
-<<set $prevpass to "AR1">>
+<<set $prevpass to "landing">>
 <<set $passage to "AR2">>
 <<set $nextpass to "AR3">>
-/* <<include "header">> */
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $ARtitle to "The Maidan, 2014">>
+<<set $transcriptname to  "AR2transcript">>
+ /* <<audio ":all" stop>><<audio "5" play>> */
+<<include "headerAR">>
+/* OPEN */
 <main class="ar">
 
-  <div class="ar-imgs-container one" id="ARContainer">
-    <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/maidan2b.jpeg" class="">
-      </div>
-    <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/maidan1b.jpeg" class="">
-      </div>
-  </div>
+   <div class="ar-imgs-container one" id="ARContainer">
+      <div class="hidden-img-wrapper touch transparent" id="reveal" >
+          <img src="./assets/img/maidan2b.jpeg" class="">
+        </div>
+      <div class="ar-img-wrapper touch bottom" id="initial" >
+        <img src="./assets/img/maidan1b.jpeg" class="">
+        </div>
+    </div>
 
-
+<div id="transcript"></div>
 </main>
 <<include "footerMaidan">>
 <<done>><<set $s to setup.startup()>><</done>>
+
+:: AR2transcript
+In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.
+
 
 :: AR3 [nobr]{"position":"450,50","size":"100,100"}
 /* Maidan  */
-<<set $prevpass to "AR2">>
+<<set $prevpass to "landing">>
 <<set $passage to "AR3">>
 <<set $nextpass to "AR4">>
-/* <<include "header">> */
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $ARtitle to "The Maidan, 2014">>
+<<set $transcriptname to  "AR3transcript">>
+ /* <<audio ":all" stop>><<audio "5" play>> */
+<<include "headerAR">>
+/* OPEN */
 <main class="ar">
 
-  <div class="ar-imgs-container one" id="ARContainer">
-    <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/maidan2c.jpeg" class="">
-      </div>
-    <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/maidan1c.jpeg" class="">
-      </div>
-  </div>
+   <div class="ar-imgs-container one" id="ARContainer">
+      <div class="hidden-img-wrapper touch transparent" id="reveal" >
+          <img src="./assets/img/maidan2c.jpeg" class="">
+        </div>
+      <div class="ar-img-wrapper touch bottom" id="initial" >
+        <img src="./assets/img/maidan1c.jpeg" class="">
+        </div>
+    </div>
 
-
+<div id="transcript"></div>
 </main>
 <<include "footerMaidan">>
 <<done>><<set $s to setup.startup()>><</done>>
+
+:: AR3transcript
+In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.
 
 
 :: AR4 [nobr]{"position":"450,50","size":"100,100"}
 /* Maidan  */
-<<set $prevpass to "AR3">>
+<<set $prevpass to "landing">>
 <<set $passage to "AR4">>
 <<set $nextpass to "AR5">>
-/* <<include "header">> */
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $ARtitle to "The Maidan, 2014">>
+<<set $transcriptname to  "AR4transcript">>
+ /* <<audio ":all" stop>><<audio "5" play>> */
+<<include "headerAR">>
+/* OPEN */
 <main class="ar">
 
-  <div class="ar-imgs-container one" id="ARContainer">
-    <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/maidan2d.jpeg" class="">
-      </div>
-    <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/maidan1d.jpeg" class="">
-      </div>
-  </div>
+   <div class="ar-imgs-container one" id="ARContainer">
+      <div class="hidden-img-wrapper touch transparent" id="reveal" >
+          <img src="./assets/img/maidan2d.jpeg" class="">
+        </div>
+      <div class="ar-img-wrapper touch bottom" id="initial" >
+        <img src="./assets/img/maidan1d.jpeg" class="">
+        </div>
+    </div>
+
+<div id="transcript"></div>
 </main>
 <<include "footerMaidan">>
 <<done>><<set $s to setup.startup()>><</done>>
 
+:: AR4transcript
+In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
+
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
+
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.
+
 
 :: AR5 [nobr]{"position":"450,50","size":"100,100"}
 /* Maidan  */
-<<set $prevpass to "AR4">>
+<<set $prevpass to "landing">>
 <<set $passage to "AR5">>
-<<set $nextpass to "AR5">>
-/* <<include "header">> */
+<<set $nextpass to "A5">>
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $ARtitle to "The Maidan, 2014">>
+<<set $transcriptname to  "AR5transcript">>
+ /* <<audio ":all" stop>><<audio "5" play>> */
+<<include "headerAR">>
+/* OPEN */
 <main class="ar">
 
-  <div class="ar-imgs-container one" id="ARContainer">
-    <div class="hidden-img-wrapper touch transparent" id="reveal" >
-        <img src="./assets/img/maidan2e.jpeg" class="">
-      </div>
-    <div class="ar-img-wrapper touch bottom" id="initial" >
-      <img src="./assets/img/maidan1e.jpeg" class="">
-      </div>
-  </div>
+   <div class="ar-imgs-container one" id="ARContainer">
+      <div class="hidden-img-wrapper touch transparent" id="reveal" >
+          <img src="./assets/img/maidan2e.jpeg" class="">
+        </div>
+      <div class="ar-img-wrapper touch bottom" id="initial" >
+        <img src="./assets/img/maidan1e.jpeg" class="">
+        </div>
+    </div>
 
-
+<div id="transcript"></div>
 </main>
 <<include "footerAR">>
 <<done>><<set $s to setup.startup()>><</done>>
 
+:: AR5transcript
+In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
 
+The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
 
+Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
 
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.
 
 :: footerAR [nobr]{"position":"100,375","size":"100,100"}
 <footer class="ar">
   <div class="nav-wrapper">
     <div class="nav-item">
-    <div id="mount"> <span>Press the image</span> <span>to see it transform</span></div>
-    <<silently>>
-	<<repeat 10s>>
-    <<timed 0.1s>>
-      <<replace "#mount">>
-         <span>When you’ve finished</span> <span>listening let me know</span>
-      <</replace>>
-     <</timed>>
-     <<timed 6s>>
-      <<replace "#mount">>
-       <span>Press the image</span> <span>to see it transform</span>
-      <</replace>>
-     <</timed>>
-    <</repeat>>
-<</silently>>
-    </div></div>
-    <div class="nav-wrapper">
-    <div class="nav-item">
        <a href="./../map.html"><button>Back to Map</button></a>
     </div>
+    </div>
+   <div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
   </div>
+</div>  
 </footer>
 
 
@@ -527,26 +477,22 @@ Lorem ipsum dolor sit amet consectetur, adipiscing elit gravida aenean venenatis
         [img[Back|./assets/img/back.png][$prevpass]]
     </div>
   </div>
-
-<div class="nav-wrapper">
-    <div class="nav-item">
-    <div id="mount"> <span>Press the image</span> <span>to see it transform</span></div>
-    <<silently>>
-	<<repeat 10s>>
-    <<timed 0.1s>>
-      <<replace "#mount">>
-         <span>Move clockwise and click </span> <span> to see the next image</span>
-      <</replace>>
-     <</timed>>
-     <<timed 6s>>
-      <<replace "#mount">>
-       <span>Press the image</span> <span>to see it transform</span>
-      <</replace>>
-     <</timed>>
-    <</repeat>>
-<</silently>>
- </div>
+  <div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
   </div>
+</div>
     <div class="nav-wrapper">
     <div class="nav-item">
        <<button "Next">><<goto $nextpass>><</button>>
