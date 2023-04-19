@@ -19,23 +19,6 @@ let map, infoWindow;
 function initMap() {
   let adv = [];
 
-  // FETCH FUNCTIONALITY FOR WHEN CONNECTED TO STRAPI
-
-  // const fetchAdventures = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
-  //     );
-  //     if (!response.ok) throw response;
-  //     const adventures = await response.json();
-  //     // console.log("adventures", adventures);
-  //     return adventures;
-  //   } catch (error) {
-  //     console.log("error", error);
-  //     throw error;
-  //   }
-  // };
-
   map = new google.maps.Map(document.getElementById("mazeMap"), {
     center: { lat: 53.40889996737653, lng: -2.981239934137192 },
     zoom: 17,
@@ -48,7 +31,7 @@ function initMap() {
     // fullscreenControl: false,
   });
 
-  let iconBase = "./../assets/img/markers/";
+  let iconBase = "assets/img/markers/";
 
   const icons = {
     lofi: {
@@ -129,7 +112,7 @@ function initMap() {
           // position: new google.maps.LatLng(51.51202, -0.09088),
           type: type,
           content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3><p>${logistics}</p>
-      <a href="../locations/${slug}.html"><button><h3 class="info">I'm here</h3></button></a></div>`,
+      <a href="locations/${slug}.html"><button><h3 class="info">I'm here</h3></button></a></div>`,
         };
         locations.push(location);
       }
