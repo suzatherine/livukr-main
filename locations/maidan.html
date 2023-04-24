@@ -298,7 +298,7 @@ setup.backThirty = () => {
 &lt;&lt;set $currentLocation to &quot;The Maidan&quot;&gt;&gt;
 &lt;&lt;set $ARtitle to &quot;The Maidan - Revolution Of Dignity&quot;&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;AR1transcript&quot;&gt;&gt;
-&lt;&lt;audio &quot;audio&quot; play&gt;&gt;
+/* &lt;&lt;audio &quot;audio&quot; play&gt;&gt; */
 &lt;&lt;include &quot;headerAR&quot;&gt;&gt;
 /* OPEN */
 &lt;main class=&quot;ar&quot;&gt;
@@ -511,6 +511,11 @@ Many protestors were injured and over a hundred were killed. They are remembered
    &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
        &lt;a href=&quot;./../map.html&quot;&gt;&lt;img src=&quot;assets/img/back.png&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+   &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot; id=&quot;playpause&quot;&gt; 
+        &lt;&lt;link [img[assets/img/playpause.png]]&gt;&gt;&lt;&lt;audio &quot;audio&quot; play&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
    &lt;div class=&quot;nav-wrapper&quot;&gt;

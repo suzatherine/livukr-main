@@ -244,7 +244,7 @@ setup.backThirty = () => {
 <<set $currentLocation to "The Maidan">>
 <<set $ARtitle to "The Maidan - Revolution Of Dignity">>
 <<set $transcriptname to  "AR1transcript">>
-<<audio "audio" play>>
+/* <<audio "audio" play>> */
 <<include "headerAR">>
 /* OPEN */
 <main class="ar">
@@ -491,6 +491,11 @@ Many protestors were injured and over a hundred were killed. They are remembered
    <div class="nav-wrapper">
     <div class="nav-item">
        <a href="./../map.html"><img src="assets/img/back.png"></a>
+    </div>
+  </div>
+   <div class="nav-wrapper">
+    <div class="nav-item" id="playpause"> 
+        <<link [img[assets/img/playpause.png]]>><<audio "audio" play>><<addclass "#playpause" "playhighlight">><</link>>
     </div>
   </div>
    <div class="nav-wrapper">
