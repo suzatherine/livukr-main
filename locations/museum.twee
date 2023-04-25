@@ -194,6 +194,21 @@ setup.backThirty = () => {
   <h2>$Panotitle</h2>
  </div>
  </div>    
+  <div class="nav-wrapper">
+   <div class="nav-item" >
+      <p class="comment">Press <<button "play">> 
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</button>>  <br>to hear audio</p>
+  </div>
+</div>
 </header>
 
 :: footerback [nobr]{"position":"100,375","size":"100,100"}
@@ -215,10 +230,11 @@ setup.backThirty = () => {
 <<set $passage to "360">>
 <<set $currentLocation to "Kharkiv Fine Arts Museum">>
 <<set $transcript to false>>
+<<set $playToggle to false>>
 <<set $Panotitle to "Kharkiv Fine Arts Museum">>
 <<set $transcriptname to  "360transcript">>
 <<include "headerpano">>
-<audio id="audio" autoplay>
+<audio id="audio" >
   <source src="https://withfireandrageliverpool.com/audio/IG/IG5-V1.mp3">
 </audio>
 <main class="pano">
@@ -278,7 +294,7 @@ Inside is one of the largest collections of the fine and applied arts in Ukraine
   </div>
 </div>  
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>
+
 
 
 

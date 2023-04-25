@@ -181,6 +181,21 @@ setup.backThirty = () => {
   <h2>$Panotitle</h2>
  </div>
  </div>    
+  <div class="nav-wrapper">
+   <div class="nav-item" >
+      <p class="comment">Press <<button "play">> 
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</button>>  <br>to hear audio</p>
+  </div>
+</div>
 </header>
 
 :: footerback [nobr]{"position":"100,375","size":"100,100"}
@@ -202,6 +217,7 @@ setup.backThirty = () => {
 <<set $passage to "360">>
 <<set $currentLocation to "Karazin National University - Outside">>
 <<set $transcript to false>>
+<<set $playToggle to false>>
 <<set $Panotitle to "Karazin National University - Outside">>
 <<set $transcriptname to  "360transcript">>
 <<include "headerpano">>
@@ -265,7 +281,7 @@ This has left millions of Ukrainians without access to education.
   </div>
 </div>  
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>
+
 
 
 

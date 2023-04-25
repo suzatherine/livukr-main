@@ -180,6 +180,21 @@ setup.backThirty = () => {
   <h2>$Panotitle</h2>
  </div>
  </div>    
+ <div class="nav-wrapper">
+   <div class="nav-item" >
+      <p class="comment">Press <<button "play">> 
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</button>>  <br>to hear audio</p>
+  </div>
+</div>
 </header>
 
 :: footerback [nobr]{"position":"100,375","size":"100,100"}
@@ -199,10 +214,11 @@ setup.backThirty = () => {
 <<set $passage to "360">>
 <<set $currentLocation to "Kharkiv Government Building">>
 <<set $transcript to false>>
+<<set $playToggle to false>>
 <<set $Panotitle to "Kharkiv Government Building">>
 <<set $transcriptname to  "360transcript">>
 <<include "headerpano">>
-<audio id="audio" autoplay>
+<audio id="audio" >
   <source src="https://withfireandrageliverpool.com/audio/IG/IG10-V1.mp3">
 </audio>
 <main class="pano">
@@ -262,7 +278,7 @@ This resulted in the death of an estimated 29 people and 35 wounded.
   </div>
 </div>  
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>
+
 
 
 
