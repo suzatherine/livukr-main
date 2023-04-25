@@ -103,7 +103,7 @@ function initMap() {
           // position: new google.maps.LatLng(51.51202, -0.09088),
           type: type,
           content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3><p>${logistics}</p>
-      <a href="https://withfireandrageliverpool.com/words" rel="noreferrer"><button><h3 class="info">I'm here</h3></button></a></div>`,
+      <a href="https://withfireandrageliverpool.com/words" rel="noreferrer"><button><h3 class="info">Show me</h3></button></a></div>`,
         };
         locations.push(location);
       } else {
@@ -112,7 +112,7 @@ function initMap() {
           // position: new google.maps.LatLng(51.51202, -0.09088),
           type: type,
           content: `<div id="content" class="infoContent"><h3 class="adventureName">${name}</h3><p>${logistics}</p>
-      <a href="locations/${slug}.html"><button><h3 class="info">I'm here</h3></button></a></div>`,
+      <a href="locations/${slug}.html"><button><h3 class="info">Show me</h3></button></a></div>`,
         };
         locations.push(location);
       }

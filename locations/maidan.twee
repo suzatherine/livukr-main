@@ -195,6 +195,36 @@ setup.backThirty = () => {
 <<waitforaudio>>
 
 
+:: headerAR1 [nobr]{"position":"100,225","size":"100,100"}
+
+<header class="ar" >
+ <div class="nav-wrapper">
+    <div class="nav-item">
+  <h2>$ARtitle</h2>
+ </div>
+ </div>
+ <div class="nav-wrapper" id="mount"></div>
+ 
+    <<timed 0.1s>><<replace "#mount">>
+      <div class="nav-item">
+         <p class="comment"> Press <div class="inline-btn-wrapper">
+         <<button "play">><<audio "audio" play>><<addclass "#playpause" "playhighlight">>
+          <<timed 2s>>
+              <<replace "#mount">>
+               <div class="nav-item">
+              <p class="comment">Press the image to see it transform </p>
+              </div>
+              <</replace>>
+           <</timed>>
+          <</button>>
+          </div> to hear audio</p></div>
+   
+<</replace>>    <</timed>>
+    
+
+</header>
+
+
 :: headerAR [nobr]{"position":"100,225","size":"100,100"}
 
 <header class="ar" >
@@ -206,10 +236,14 @@ setup.backThirty = () => {
  <div class="nav-wrapper" id="mount"></div>
  
     <<timed 0.1s>><<replace "#mount">>
-    <div class="nav-item">
-    <p class="comment">Press the image to see it transform </p>
-    </div>
+
+               <div class="nav-item">
+              <p class="comment">Press the image to see it transform </p>
+              </div>
+    
+   
 <</replace>>    <</timed>>
+    
 
 </header>
 
@@ -245,10 +279,10 @@ setup.backThirty = () => {
 <<set $ARtitle to "The Maidan - Revolution Of Dignity">>
 <<set $transcriptname to  "AR1transcript">>
 /* <<audio "audio" play>> */
-<<include "headerAR">>
+<<include "headerAR1">>
 /* OPEN */
 <main class="ar">
-
+/* <<audio "audio" play>><<addclass "#playpause" "playhighlight">> */
    <div class="ar-imgs-container one" id="ARContainer">
       <div class="hidden-img-wrapper touch transparent" id="reveal" >
           <img src="./assets/img/maidan2a.jpeg" class="">
@@ -258,13 +292,12 @@ setup.backThirty = () => {
         </div>
     </div>
 
-
   <div id="ARmount"></div>
 <div id="transcript"></div>
 </main>
 <<include "footerMaidan1">>
  <<timed 6s>><<replace "#ARmount">>
-    <p class="comment">Move around clockwise and click for the next image</p>
+    <p class="comment">Move around clockwise and click for the  <<button "Next">><<goto $nextpass>><</button>> image</p>
 <</replace>>    <</timed>>
 <<done>><<set $s to setup.startup()>><</done>>
 
@@ -297,7 +330,7 @@ setup.backThirty = () => {
 </main>
 <<include "footerMaidan">>
  <<timed 6s>><<replace "#ARmount">>
-    <p class="comment">Move around clockwise and click for the next image</p>
+    <p class="comment">Move around clockwise and click for the  <<button "Next">><<goto $nextpass>><</button>>  image</p>
 <</replace>>    <</timed>>
 <<done>><<set $s to setup.startup()>><</done>>
 
@@ -495,7 +528,8 @@ Many protestors were injured and over a hundred were killed. They are remembered
   </div>
    <div class="nav-wrapper">
     <div class="nav-item" id="playpause"> 
-        <<link [img[assets/img/playpause.png]]>><<audio "audio" play>><<addclass "#playpause" "playhighlight">><</link>>
+        <<link [img[assets/img/playpause.png]]>>
+            <<audio "audio" play>><<addclass "#playpause" "playhighlight">><</link>>
     </div>
   </div>
    <div class="nav-wrapper">

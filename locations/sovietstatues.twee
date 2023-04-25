@@ -41,12 +41,18 @@ return iFrame
 
 // TOUCHEVENTS 
 // taken from https://developer.mozilla.org/en-US/docs/Web/API/Touch_events  
-setup.startup = () =>  {
+setup.startup = (playOnTouch) =>  {
   const ongoingTouches = [];
   console.log(ongoingTouches)
 
 const handleStart = (evt) =>{
   evt.preventDefault();
+    if (playOnTouch === true){
+const audio = document.getElementById("audio");
+const playpause = document.getElementById("playpause");
+ audio.play();
+ playpause.classList.add("playhighlight");
+}
  const initial = document.getElementById("initial");
 const reveal = document.getElementById("reveal");
      initial.classList.add("transparent");  
@@ -221,7 +227,7 @@ setup.backThirty = () => {
 <<set $ARtitle to "Soviet Statues">>
 <<set $transcriptname to  "ARtranscript">>
 <<include "headerAR">>
-<audio id="audio" autoplay>
+<audio id="audio" >
   <source src="https://withfireandrageliverpool.com/audio/IG/IG7-V1.mp3">
 </audio>
 <main class="ar">
@@ -238,7 +244,7 @@ setup.backThirty = () => {
 <div id="transcript"></div>
 </main>
 <<include "footerAR">>
-<<done>><<set $s to setup.startup()>><</done>>
+<<done>><<set $s to setup.startup(true)>><</done>>
 
 :: ARtranscript
 As part of a process of reclaiming Ukrainian history and cultural identity, statues of Lenin and others connected to Soviet rule have been removed.
@@ -288,4 +294,3 @@ This period included the Holodomor which translates as "death by hunger". This h
   </div>
 </div>  
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>

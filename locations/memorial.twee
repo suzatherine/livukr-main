@@ -41,12 +41,18 @@ return iFrame
 
 // TOUCHEVENTS 
 // taken from https://developer.mozilla.org/en-US/docs/Web/API/Touch_events  
-setup.startup = () =>  {
+setup.startup = (playOnTouch) =>  {
   const ongoingTouches = [];
   console.log(ongoingTouches)
 
 const handleStart = (evt) =>{
   evt.preventDefault();
+    if (playOnTouch === true){
+const audio = document.getElementById("audio");
+const playpause = document.getElementById("playpause");
+ audio.play();
+ playpause.classList.add("playhighlight");
+}
  const initial = document.getElementById("initial");
 const reveal = document.getElementById("reveal");
      initial.classList.add("transparent");  
@@ -216,7 +222,7 @@ setup.backThirty = () => {
 <<set $transcript to false>>
 <<set $ARtitle to "Drobitsky Yar Holocaust Memorial">>
 <<set $transcriptname to  "ARtranscript">>
-<audio id="audio" autoplay>
+<audio id="audio" >
   <source src="https://withfireandrageliverpool.com/audio/IG/IG3-V1.mp3">
 </audio>
 <<include "headerAR">>
@@ -236,7 +242,7 @@ setup.backThirty = () => {
 
 </main>
 <<include "footerAR">>
-<<done>><<set $s to setup.startup()>><</done>>
+<<done>><<set $s to setup.startup(true)>><</done>>
 
 :: ARtranscript
 The Drobitsky Yar Holocaust Memorial, commemorates where an estimated 15,000 Jews, were killed during World War II. 
@@ -286,7 +292,7 @@ It is one of many Jewish memorials and religious sights that have been damaged b
   </div>
 </div>  
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>
+
 
 
 

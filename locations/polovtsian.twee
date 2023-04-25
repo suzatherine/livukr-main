@@ -41,12 +41,18 @@ return iFrame
 
 // TOUCHEVENTS 
 // taken from https://developer.mozilla.org/en-US/docs/Web/API/Touch_events  
-setup.startup = () =>  {
+setup.startup = (playOnTouch) =>  {
   const ongoingTouches = [];
   console.log(ongoingTouches)
 
 const handleStart = (evt) =>{
   evt.preventDefault();
+    if (playOnTouch === true){
+const audio = document.getElementById("audio");
+const playpause = document.getElementById("playpause");
+ audio.play();
+ playpause.classList.add("playhighlight");
+}
  const initial = document.getElementById("initial");
 const reveal = document.getElementById("reveal");
      initial.classList.add("transparent");  
@@ -200,7 +206,7 @@ setup.backThirty = () => {
 <<set $transcriptname to  "ARtranscript">>
 
 <<include "headerAR">>
-<audio id="audio" autoplay>
+<audio id="audio" >
   <source src="https://withfireandrageliverpool.com/audio/IG/IG6-V1.mp3">
 </audio>
 <main class="ar">
@@ -219,7 +225,7 @@ setup.backThirty = () => {
 </main>
 <<include "footerAR">>
 
-<<done>><<set $s to setup.startup()>><</done>>
+<<done>><<set $s to setup.startup(true)>><</done>>
 
 :: ARtranscript
 Several sacred Polovtsian statues, have been destroyed during Russia’s six-month occupation of Izium. 
@@ -269,7 +275,7 @@ They date back from the 9th to the 13th century, representing warrior men and wo
   </div>
 </div>  
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>
+
 
 
 

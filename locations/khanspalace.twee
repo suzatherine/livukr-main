@@ -1,5 +1,5 @@
 :: StoryTitle
-Investigation Ground Polovtsian 
+Investigation Ground Khan's Palace 
 
 
 :: StoryData
@@ -41,12 +41,18 @@ return iFrame
 
 // TOUCHEVENTS 
 // taken from https://developer.mozilla.org/en-US/docs/Web/API/Touch_events  
-setup.startup = () =>  {
+setup.startup = (playOnTouch) =>  {
   const ongoingTouches = [];
   console.log(ongoingTouches)
 
 const handleStart = (evt) =>{
   evt.preventDefault();
+    if (playOnTouch === true){
+const audio = document.getElementById("audio");
+const playpause = document.getElementById("playpause");
+ audio.play();
+ playpause.classList.add("playhighlight");
+}
  const initial = document.getElementById("initial");
 const reveal = document.getElementById("reveal");
      initial.classList.add("transparent");  
@@ -198,7 +204,7 @@ setup.backThirty = () => {
 <<set $transcript to false>>
 <<set $ARtitle to "Khan's Palace">>
 <<set $transcriptname to  "ARtranscript">>
-<audio id="audio" autoplay>
+<audio id="audio">
   <source src="https://withfireandrageliverpool.com/audio/IG/IG11-V1.mp3">
 </audio>
 <<include "headerAR">>
@@ -218,7 +224,7 @@ setup.backThirty = () => {
 </main>
 <<include "footerAR">>
 
-<<done>><<set $s to setup.startup()>><</done>>
+<<done>><<set $s to setup.startup(true)>><</done>>
 
 :: ARtranscript
 Russia has taken over thousands of Crimean sites of national and local importance. Undertaking unauthorized excavations and construction.  
@@ -268,7 +274,7 @@ In February 2022, Russian authorities imprisoned Crimean Tatar architect Edem Du
   </div>
 </div>  
 </footer>
-<<done>><<addclass "#playpause" "playhighlight">><</done>>
+
 
 
 

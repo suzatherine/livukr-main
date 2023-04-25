@@ -22,6 +22,21 @@ header {
   align-items: flex-start;
   background-color: var(--main-bg-color);
 }
+
+header.header-map {
+  padding-bottom: 0;
+}
+
+header.header-map > h1 {
+  text-align: left;
+  font-weight: 600;
+}
+
+header.header-map > p {
+  color: white;
+  font-size: 1.3rem;
+  text-align: right;
+}
 footer {
   position: fixed;
   bottom: 0;

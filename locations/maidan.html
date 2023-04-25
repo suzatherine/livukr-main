@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://C3A16691-C05E-47CA-B8E6-A1CC8300BED9// --><tw-storydata name="Investigation Ground Maidan" startnode="4" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C3A16691-C05E-47CA-B8E6-A1CC8300BED9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<!-- UUID://C3A16691-C05E-47CA-B8E6-A1CC8300BED9// --><tw-storydata name="Investigation Ground Maidan" startnode="5" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C3A16691-C05E-47CA-B8E6-A1CC8300BED9" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
 @import url("./styles/generics.css");
 @import url("./styles/styles.css");</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
@@ -266,7 +266,7 @@ setup.backThirty = () => {
   const timeHolder = audio.currentTime;
   audio.currentTime = timeHolder -30;
   }</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;audio&quot; &quot;https://withfireandrageliverpool.com/audio/IG/IG2-V1.mp3&quot;&gt;&gt;
-&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="headerAR" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;ar&quot; &gt;
+&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="headerAR1" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;ar&quot; &gt;
  &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
   &lt;h2&gt;$ARtitle&lt;/h2&gt;
@@ -275,12 +275,41 @@ setup.backThirty = () => {
  &lt;div class=&quot;nav-wrapper&quot; id=&quot;mount&quot;&gt;&lt;/div&gt;
  
     &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-    &lt;div class=&quot;nav-item&quot;&gt;
-    &lt;p class=&quot;comment&quot;&gt;Press the image to see it transform &lt;/p&gt;
-    &lt;/div&gt;
+      &lt;div class=&quot;nav-item&quot;&gt;
+         &lt;p class=&quot;comment&quot;&gt; Press &lt;div class=&quot;inline-btn-wrapper&quot;&gt;
+         &lt;&lt;button &quot;play&quot;&gt;&gt;&lt;&lt;audio &quot;audio&quot; play&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
+          &lt;&lt;timed 2s&gt;&gt;
+              &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+               &lt;div class=&quot;nav-item&quot;&gt;
+              &lt;p class=&quot;comment&quot;&gt;Press the image to see it transform &lt;/p&gt;
+              &lt;/div&gt;
+              &lt;&lt;/replace&gt;&gt;
+           &lt;&lt;/timed&gt;&gt;
+          &lt;&lt;/button&gt;&gt;
+          &lt;/div&gt; to hear audio&lt;/p&gt;&lt;/div&gt;
+   
 &lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
+    
 
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="headerAR" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;ar&quot; &gt;
+ &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+  &lt;h2&gt;$ARtitle&lt;/h2&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;nav-wrapper&quot; id=&quot;mount&quot;&gt;&lt;/div&gt;
+ 
+    &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+
+               &lt;div class=&quot;nav-item&quot;&gt;
+              &lt;p class=&quot;comment&quot;&gt;Press the image to see it transform &lt;/p&gt;
+              &lt;/div&gt;
+    
+   
+&lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
+    
+
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="4" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/backward.png][$prevpass]]
@@ -290,7 +319,7 @@ setup.backThirty = () => {
  
   &lt;/div&gt;
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="AR1" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="AR1" tags="nobr" position="450,50" size="100,100">/* Maidan  */
 &lt;&lt;set $prevpass to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR2&quot;&gt;&gt;
@@ -299,10 +328,10 @@ setup.backThirty = () => {
 &lt;&lt;set $ARtitle to &quot;The Maidan - Revolution Of Dignity&quot;&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;AR1transcript&quot;&gt;&gt;
 /* &lt;&lt;audio &quot;audio&quot; play&gt;&gt; */
-&lt;&lt;include &quot;headerAR&quot;&gt;&gt;
+&lt;&lt;include &quot;headerAR1&quot;&gt;&gt;
 /* OPEN */
 &lt;main class=&quot;ar&quot;&gt;
-
+/* &lt;&lt;audio &quot;audio&quot; play&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt; */
    &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
       &lt;div class=&quot;hidden-img-wrapper touch transparent&quot; id=&quot;reveal&quot; &gt;
           &lt;img src=&quot;./assets/img/maidan2a.jpeg&quot; class=&quot;&quot;&gt;
@@ -312,15 +341,14 @@ setup.backThirty = () => {
         &lt;/div&gt;
     &lt;/div&gt;
 
-
   &lt;div id=&quot;ARmount&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan1&quot;&gt;&gt;
  &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
-    &lt;p class=&quot;comment&quot;&gt;Move around clockwise and click for the next image&lt;/p&gt;
+    &lt;p class=&quot;comment&quot;&gt;Move around clockwise and click for the  &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt; image&lt;/p&gt;
 &lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="AR2" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="AR2" tags="nobr" position="450,50" size="100,100">/* Maidan  */
 &lt;&lt;set $prevpass to &quot;AR1&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR2&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR3&quot;&gt;&gt;
@@ -347,9 +375,9 @@ setup.backThirty = () => {
 &lt;/main&gt;
 &lt;&lt;include &quot;footerMaidan&quot;&gt;&gt;
  &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
-    &lt;p class=&quot;comment&quot;&gt;Move around clockwise and click for the next image&lt;/p&gt;
+    &lt;p class=&quot;comment&quot;&gt;Move around clockwise and click for the  &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;  image&lt;/p&gt;
 &lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="AR3" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="AR3" tags="nobr" position="450,50" size="100,100">/* Maidan  */
 &lt;&lt;set $prevpass to &quot;AR2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR3&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR4&quot;&gt;&gt;
@@ -378,7 +406,7 @@ setup.backThirty = () => {
  &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
     &lt;p class=&quot;comment&quot;&gt;Move around clockwise and click for the next image&lt;/p&gt;
 &lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="AR4" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AR4" tags="nobr" position="450,50" size="100,100">/* Maidan  */
 &lt;&lt;set $prevpass to &quot;AR3&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR4&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR5&quot;&gt;&gt;
@@ -405,7 +433,7 @@ setup.backThirty = () => {
  &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
     &lt;p class=&quot;comment&quot;&gt;Move around clockwise and click for the next image&lt;/p&gt;
 &lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AR5" tags="nobr" position="450,50" size="100,100">/* Maidan  */
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AR5" tags="nobr" position="450,50" size="100,100">/* Maidan  */
 &lt;&lt;set $prevpass to &quot;AR4&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;AR5&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;AR5&quot;&gt;&gt;
@@ -432,13 +460,13 @@ setup.backThirty = () => {
  &lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#ARmount&quot;&gt;&gt;
     &lt;p class=&quot;comment&quot;&gt;Move around clockwise and click for the next image&lt;/p&gt;
 &lt;&lt;/replace&gt;&gt;    &lt;&lt;/timed&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AR1transcript" tags="" position="1100,100" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
+&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="AR1transcript" tags="" position="1225,100" size="100,100">In 2014, the Maidan - or revolution of dignity, saw Ukrainians rise up.
 
 The protests were sparked by President Yanukovych bowing to pressure from Moscow, not to enter into a free trade agreement with the European Union. The government responded to the protests with violence and police aggression.
 
 Despite this protests continued, President Yanukovych fled to Russia and an interim government was established.
 
-Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.</tw-passagedata><tw-passagedata pid="10" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+Many protestors were injured and over a hundred were killed. They are remembered as the Heavenly Hundred.</tw-passagedata><tw-passagedata pid="11" name="footerAR" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
     &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
        &lt;a href=&quot;./../map.html&quot;&gt;&lt;button&gt;Back to Map&lt;/button&gt;&lt;/a&gt;
@@ -477,7 +505,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
   &lt;/div&gt;
 &lt;/div&gt;  
 &lt;/footer&gt;
-/* &lt;&lt;done&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;&lt;&lt;/done&gt;&gt; */</tw-passagedata><tw-passagedata pid="11" name="footerMaidan" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+/* &lt;&lt;done&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;&lt;&lt;/done&gt;&gt; */</tw-passagedata><tw-passagedata pid="12" name="footerMaidan" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
 
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -506,7 +534,7 @@ Many protestors were injured and over a hundred were killed. They are remembered
        &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="12" name="footerMaidan1" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="13" name="footerMaidan1" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;ar&quot;&gt;
 
    &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -515,7 +543,8 @@ Many protestors were injured and over a hundred were killed. They are remembered
   &lt;/div&gt;
    &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot; id=&quot;playpause&quot;&gt; 
-        &lt;&lt;link [img[assets/img/playpause.png]]&gt;&gt;&lt;&lt;audio &quot;audio&quot; play&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+        &lt;&lt;link [img[assets/img/playpause.png]]&gt;&gt;
+            &lt;&lt;audio &quot;audio&quot; play&gt;&gt;&lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
    &lt;div class=&quot;nav-wrapper&quot;&gt;
